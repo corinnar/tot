@@ -41,8 +41,8 @@ h1,h2{
   margin-bottom: 30px;
 }
 
-.home-title h1{ font-size:3.2rem; }
-.home-title h2{ font-size:1.2rem; margin-top:0.5rem; }
+.home-title h1{ font-size:3.0rem; }
+.home-title h2{ font-size:1.0rem; margin-top:0.5rem; }
 
 .home-illustration{
   display:flex;
@@ -397,6 +397,119 @@ h1,h2{
     font-size:1.5rem;
 }
 
+/* ============================
+   Blank fillable example slide
+============================ */
+
+.editable-field{
+    outline: none;
+    cursor: text;
+    border: 1px dashed rgba(0,0,0,0.25);
+    border-radius: 4px;
+    padding: 2px 6px;
+    min-height: 1.4em;
+    transition: border-color 0.15s, background 0.15s;
+}
+
+.editable-field:hover{
+    border-color: rgba(0,0,0,0.45);
+}
+
+.editable-field:focus{
+    border: 1px dashed var(--brown);
+    background: rgba(255,255,255,0.15);
+}
+
+/* Placeholder text, colour-matched per field so it reads clearly
+   against that field's own background */
+.editable-field:empty:before{
+    content: attr(data-placeholder);
+    font-style: italic;
+}
+
+.example-title.editable-field{
+    border-color: rgba(255,255,255,0.35);
+}
+.example-title.editable-field:hover,
+.example-title.editable-field:focus{
+    border-color: rgba(255,255,255,0.6);
+}
+.example-title.editable-field:empty:before{
+    color: rgba(255,255,255,0.55);
+}
+
+.policy-question.editable-field:empty:before{
+    color: #999;
+}
+
+.step-heading.editable-field:empty:before,
+.step-title.editable-field:empty:before{
+    color: #6b6b6b;
+}
+
+.step-text.editable-field{
+    border-color: rgba(255,255,255,0.35);
+}
+.step-text.editable-field:hover,
+.step-text.editable-field:focus{
+    border-color: rgba(255,255,255,0.6);
+}
+.step-text.editable-field:empty:before{
+    color: rgba(255,255,255,0.65);
+}
+
+.example-footer.editable-field{
+    border-color: rgba(255,255,255,0.35);
+}
+.example-footer.editable-field:hover,
+.example-footer.editable-field:focus{
+    border-color: rgba(255,255,255,0.6);
+}
+.example-footer.editable-field:empty:before{
+    color: rgba(255,255,255,0.65);
+}
+
+.blank-example-actions{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.clear-btn{
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: "PT Sans", sans-serif;
+    cursor: pointer;
+    background: transparent;
+    color: var(--cream);
+    border: 1px solid var(--cream);
+}
+
+.clear-btn:hover{
+    background: rgba(255,255,255,0.1);
+}
+
+.further-reading-footer{
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: white;
+    padding: 16px 20px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.further-reading-footer a{
+    color: #FFF6B6;
+    font-weight: bold;
+}
+
+.further-reading-footer a:hover{
+    color: white;
+}
+
 /* ==========================================
    BEST PRACTICE SLIDES
 ==========================================*/
@@ -451,6 +564,16 @@ h1,h2{
 
 .bp-content strong{
     color:#222;
+}
+
+/* Best Practices slide: tighten heading spacing and card padding
+   slightly so the 2x2 card grid comfortably clears the footer bar */
+.medium2-slide-heading.bp-slide-heading{
+    margin-bottom:20px;
+}
+
+.bp-grid .bp-content{
+    padding:18px 24px;
 }
 
 .bp-resource{
@@ -513,11 +636,43 @@ h1,h2{
 .practice-flow{
 
     width:100%;
-    margin:20px auto;
+    margin:0;
 
     display:flex;
     flex-direction:column;
     gap:2px;
+}
+
+.closing-layout{
+    display:grid;
+    grid-template-columns: 0.8fr 1.3fr;
+    gap:40px;
+    align-items:top;
+    margin-top:15px;
+}
+
+.medium2-slide-heading.closing-heading{
+    font-size:2.6rem;
+    margin-bottom:20px;
+}
+
+.closing-visual{
+    text-align:center;
+}
+
+.closing-visual img{
+    max-width:100%;
+    max-height:34vh;
+    object-fit:contain;
+}
+
+.closing-tagline{
+    color:var(--cream);
+    font-family:"PT Sans Narrow", sans-serif;
+    font-size:2.15rem;
+    font-style:italic;
+    margin-top:10px;
+    line-height:1.0;
 }
 
 .practice-step{
@@ -533,22 +688,22 @@ h1,h2{
 
     background:var(--cream);
 
-    border-left:18px solid var(--brown);
+    border-left:15px solid var(--brown);
 
-    border-radius:18px;
+    border-radius:15px;
 
-    padding:10px 15px;
+    padding:10px 5px;
 
     color:#333;
 }
 
 .practice-text h2{
 
-    margin:0 0 8px;
+    margin:0 0 6px;
 
     font-family:"PT Sans Narrow", sans-serif;
 
-    font-size:1.5rem;
+    font-size:1.2rem;
 
     color:var(--brown);
 }
@@ -566,26 +721,26 @@ h1,h2{
 
     width:100%;
 
-    margin:10px auto 0;
+    margin:6px 10px 0;
 
-    text-align:center;
+    text-align:top;
 
-    color:var(--cream);
+    color:var(--yellow);
 
     font-family:"PT Sans Narrow", sans-serif;
 
-    font-size:1.5rem;
+    font-size:2.5rem;
 
-    line-height:1;
+    line-height:2;
 }
 
 .practice-footer2{
 
     width:100%;
 
-    margin:10px auto 0;
+    margin:8px auto 0;
 
-    text-align:center;
+    text-align:top;
 
     color:var(--yellow);
 
@@ -594,6 +749,18 @@ h1,h2{
     font-size:1.5rem;
 
     line-height:1;
+}
+
+.practice-footer2 h4{
+    margin:8px auto 0;
+    font-size:1.2rem;
+    font-weight:normal;
+	text-align:top;
+    line-height:1;
+    max-width:950px;
+    margin-left:auto;
+    margin-right:auto;
+	margin-Bottom:10px;
 }
 
 /* ===== Footer ===== */
@@ -875,6 +1042,27 @@ h1,h2{
   gap: 10px;
 }
 
+/* Policy-question example list: scoped so it doesn't affect the
+   shared .snav-box styling used by the PSBR framework boxes or the
+   checklist box elsewhere on slide 3d. */
+.question-list{
+  padding: 15px 20px;
+}
+
+.question-list ul{
+  columns: 2;
+  column-gap: 30px;
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+.question-list li{
+  list-style: disc;
+  margin-left: 1.1em;
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
 /* =====================================================
    GLOBAL SLIDE SYSTEM (Non-destructive)
    ===================================================== */
@@ -945,8 +1133,57 @@ h1,h2{
   border: 2px dashed #8c7a5b;
   padding:40px;
   margin-top: 8px;
-  font-style: italic;
   line-height: 1.4;
+}
+
+.checklist-item{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.checklist-item input[type="checkbox"]{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #8c7a5b;
+}
+
+.notes-editable{
+  min-height: 140px;
+  margin-top: 10px;
+  padding: 10px;
+  outline: none;
+  font-style: normal;
+  border-bottom: 1px solid #ccc;
+}
+
+.notes-editable:empty:before{
+  content: attr(data-placeholder);
+  color: #999;
+  font-style: italic;
+}
+
+.notes-editable:focus{
+  border-bottom: 1px solid #8c7a5b;
+}
+
+.download-btn{
+  align-self: flex-start;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background: #8c7a5b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: "PT Sans", sans-serif;
+  cursor: pointer;
+}
+
+.download-btn:hover{
+  background: #6f6047;
 }
 
 /* =========================================
@@ -959,7 +1196,13 @@ h1,h2{
   gap:40px;
   align-items:center;
 
-  margin-top:20px;
+  margin-top:0;
+}
+
+/* Tighter subtitle spacing specific to the PSBR slide, so the
+   diagram below has more vertical room and doesn't run into the footer */
+.psbr-subtitle{
+  margin-bottom:15px;
 }
 
 .psbr-column{
@@ -979,6 +1222,7 @@ h1,h2{
 .psbr-image{
   width:240%;
   max-width:2000px;
+  max-height:55vh;
   object-fit:contain;
 }
 
@@ -1237,6 +1481,7 @@ h1,h2{
 /* Card row */
 .flipcard-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 2vw;
   justify-content: center;
   align-items: stretch;
@@ -1272,25 +1517,12 @@ h1,h2{
 }
 
 .img-credit {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: var(--teal-dark);
-  text-align:center;
-  padding: 1rem;
-
-  opacity: 0;
-  transition: opacity 0.5s ease;
-
-  z-index: 2;
-
-}
-
-.card-image:hover .img-credit {
-  opacity: 1;
+  text-align: center;
+  line-height: 1.2;
+  padding: 2px 4px;
+  opacity: 0.75;
 }
 
 /* Inner flip system */

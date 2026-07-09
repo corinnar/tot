@@ -14,6 +14,7 @@ const slides = [
 
       <div class="home-illustration">
         <img src="assets/images/home.png" alt="Analysis 101 illustration">
+        <div class="img-credit">Image credit: [Add credit]</div>
       </div>
 
       <div class="home-bottom-band">
@@ -80,7 +81,7 @@ html:`
             <li>*Best Practices for working with spatial data</li>
             <li>*FAIR and CARE data principles</li>
             <li>*Gender and human rights considerations in GIS & Spatial Planning</li>
-            <li>*Terms and definitions</li>
+            <li>*Human rights and land resources</li>
           </ul>
         </div>
 
@@ -91,6 +92,7 @@ html:`
         <h2>Analysis 101<br>A typology of tools</h2>
 
         <img src="assets/images/home_small.png" alt="Illustration">
+        <div class="img-credit">Image credit: [Add credit]</div>
 
         <p>
           Use this app to explore where your ‘policy question(s)’ fit within
@@ -116,7 +118,7 @@ html:`
     </div>
 
       <div class="slide-heading">
-     Understanding the policy contect of an analysis
+     Understanding the policy context of an analysis
     </div>
 
   <div class="slide slide-three">
@@ -124,6 +126,7 @@ html:`
     <div class="section-panel">
 
       <img src="assets/images/home.png" alt="Illustration">
+      <div class="img-credit">Image credit: [Add credit]</div>
 
   <div class="section-text">
      Introduction -> Define policy question(s)
@@ -137,20 +140,22 @@ html:`
 
 /* ========= SLIDE 3b (section 1 slides 3-6) ========= */
 {
-  id:"policy2",
+  id:"policy_intro",
   footer:"full",
 html:`
       <div class="slide-heading">
       Introduction to the guide
 
       <p>
-         There are a wealth of spatial planning tools and methods available to answer many of the questions
-     related to  biodiversity conservation and environmental degradation. Knowing what tools are available
-     and for what purpose can be confusing</p>
+         There is a wealth of spatial planning tools and methods available to address questions in
+     biodiversity conservation and environmental degradation, but knowing what's available and for
+     what purpose can be confusing.</p>
    <p>
-     This app is primarily aimed at beginner and intermediate users who may not be familiar with what is
-     available and who need guidance to gain a greater understanding of the types of analyses and tools that
-     could potentially support their work.
+     This app is primarily aimed at beginner and intermediate users who may be unfamiliar with what's
+     available. Using a typology of tool types, it offers guidance to help you identify the analyses
+     and tools most relevant to your policy question, and introduces good practice principles
+     (including data governance, gender and human rights considerations, and responsible spatial
+     analysis) to support their use.
       </p>
 
       <div class="home-logos--bottom">
@@ -168,11 +173,11 @@ html:`
 
 /* ========= SLIDE 3c (section 1 slides 3-6) ========= */
 {
-  id:"policy2",
+  id:"policy_questions",
   footer:"full",
 html:`
 
-    <div class="slide-heading">
+    <div class="medium2-slide-heading">
       Understanding the policy context of an analysis
     </div>
 <div class="slide slide-3c">
@@ -188,35 +193,26 @@ html:`
   <!-- RIGHT COLUMN -->
   <div class="slide-3c-right">
 
-    <div class="snav-box">
-      <h3>Risk & Vulnerability</h3>
+    <div class="snav-box question-list">
       <ul>
         <li>Which areas face greatest biodiversity risk?</li>
         <li>How vulnerable are ecosystems to climate change?</li>
-      </ul>
-    </div>
-
-    <div class="snav-box">
-      <h3>Conservation & Planning</h3>
-      <ul>
+        <li>Which ecosystems are most sensitive to disturbance?</li>
         <li>Where should we prioritize conservation?</li>
         <li>How can we expand protected area networks?</li>
-      </ul>
-    </div>
-
-    <div class="snav-box">
-      <h3>Impact Assessment</h3>
-      <ul>
+        <li>Where would Nature-based Solutions be most effective?</li>
         <li>What are our projects’ potential impacts on biodiversity?</li>
         <li>How do we assess cumulative impacts?</li>
+        <li>How will this infrastructure development affect local biodiversity?</li>
+        <li>Which species need management attention?</li>
+        <li>How do we balance competing land uses?</li>
+        <li>How can we sustainably manage natural resources while protecting biodiversity?</li>
+        <li>What are the main drivers of habitat loss in our region?</li>
+        <li>Which pressures are contributing most to ecosystem decline?</li>
       </ul>
     </div>
 
-    <div class="snav-box">
-      <h3>Resource Management</h3>
-      <ul>
-        <li>Which species need management attention?</li>
-        <li>How do we balance competing land uses?</li>
+  </div>
       </ul>
     </div>
 
@@ -229,11 +225,11 @@ html:`
 
 /* ========= SLIDE 3d (section 1 slides 3-6) ========= */
 {
-  id:"policy2",
+  id:"policy_checklist",
   footer:"full",
 html:`
 
-    <div class="slide-heading">
+    <div class="medium2-slide-heading">
       Understanding the policy context of an analysis
     </div>
 <div class="slide slide-3c">
@@ -251,28 +247,39 @@ html:`
 
     <div class="snav-box">
       <h3>Quick checklist and notes</h3>
-      <ul>
-        <li class="tick">Reviewed existing analyses</li>
-        <li class="tick">Inventoried spatial data</li>
-    <li class="tick">Identified gaps</li>
+      <ul class="checklist">
+        <li>
+          <label class="checklist-item">
+            <input type="checkbox" id="chk-reviewed" onchange="policyNotesState.reviewed=this.checked; savePolicyNotes();">
+            Reviewed existing analyses
+          </label>
+        </li>
+        <li>
+          <label class="checklist-item">
+            <input type="checkbox" id="chk-inventoried" onchange="policyNotesState.inventoried=this.checked; savePolicyNotes();">
+            Inventoried spatial data
+          </label>
+        </li>
+        <li>
+          <label class="checklist-item">
+            <input type="checkbox" id="chk-gaps" onchange="policyNotesState.gaps=this.checked; savePolicyNotes();">
+            Identified gaps
+          </label>
+        </li>
       </ul>
     </div>
 
 <div class="notes-box">
-  <strong>Notes:</strong><br>
-  .............................................................................................................................................................<br>
-  .............................................................................................................................................................<br>
-  .............................................................................................................................................................<br>
-  .............................................................................................................................................................<br>
-  .............................................................................................................................................................<br>
-  .............................................................................................................................................................<br>
-  .............................................................................................................................................................<br>
-  .............................................................................................................................................................<br>
-  .............................................................................................................................................................<br>
-  .............................................................................................................................................................<br>
-  .............................................................................................................................................................<br>
-  .............................................................................................................................................................<br>
+  <strong>Notes:</strong>
+  <div class="notes-editable"
+       id="policyNotesText"
+       contenteditable="true"
+       data-placeholder="Click here to type your notes..."
+       oninput="policyNotesState.notes=this.innerText; savePolicyNotes();">
+  </div>
 </div>
+
+<button class="download-btn" onclick="downloadPolicyNotes()">⬇ Download my notes</button>
 
   </div>
 
@@ -300,6 +307,7 @@ html:`
     <div class="section-panel">
 
       <img src="assets/images/psbr2.png" alt="Illustration">
+      <div class="img-credit">Image credit: [Add credit]</div>
 
   <div class="section-text">
      Policy themes -> PSBR framework
@@ -322,6 +330,10 @@ html:`
 
     <div class="slide-heading">
       PSBR Framework & Tool Typology
+    </div>
+
+    <div class="medium-slide-heading psbr-subtitle">
+      Pressure – State – Benefit – Response
     </div>
 
     <div class="psbr-layout">
@@ -427,6 +439,8 @@ html:`
 
     </div>
 
+    <div class="img-credit">Image credit: [Add credit]</div>
+
   </div>
 
   `
@@ -449,7 +463,7 @@ html:`
 
       <div class="themes-box">
 
-        <h2>Proposed typology for classifying ttols by policy themes</h2>
+        <h2>Proposed typology for classifying tools by policy themes</h2>
 
         <ul>
           <li><strong>a.</strong> Biodiversity & Ecosystem Sensitivity</li>
@@ -489,6 +503,7 @@ html:`
     <div class="section-panel">
 
       <img src="assets/images/compass.png" alt="Illustration">
+      <div class="img-credit">Image credit: [Add credit]</div>
 
   <div class="section-text">
      Tool typology -> Tool navigations
@@ -574,10 +589,8 @@ html:`
 
       <div class="card-image">
          <img src="assets/images/b_image1.png" alt="Biodiversity">
-         <div class="img-credit">
-          Image credit:<br> created by Wagiman<br>from Noun Project
-        </div>
       </div>
+      <div class="img-credit">Image credit:<br> created by Wagiman<br>from Noun Project</div>
               <h1>(e.g. Mapping location of sensitive species / ecosystems)</h1>
               <button onclick="flip('card-bio')">Flip</button>
             </div>
@@ -607,9 +620,9 @@ html:`
             <div class="card-front">
               <h1>Pressures on biodiversity</h1>
         <div class="card-image">
-        <img src="assets/images/b_image2.png" alt="Carbon Stocks">
-        <div class="img-credit">Image credit:<br>UNEP-WCMC
-        </div></div>
+         <img src="assets/images/b_image2.png" alt="Carbon Stocks">
+      </div>
+      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>(e.g. Fishing, deforestation, roads, pollution, climate change)</h1>
               <button onclick="flip('card-pressures')">Flip</button>
             </div>
@@ -639,9 +652,9 @@ html:`
             <div class="card-front">
               <h1>Impacts to biodiversity</h1>
         <div class="card-image">
-        <img src="assets/images/b_image3.png" alt="Impacts to biodiversity">
-        <div class="img-credit">Image credit:<br>UNEP-WCMC
-        </div></div>
+         <img src="assets/images/b_image3.png" alt="Impacts to biodiversity">
+      </div>
+      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>(e.g. Combining pressures & sensitivities to identify impact)</h1>
               <button onclick="flip('card-impacts')">Flip</button>
             </div>
@@ -671,9 +684,9 @@ html:`
             <div class="card-front">
               <h1>Wildlife health</h1>
         <div class="card-image">
-        <img src="assets/images/b_image4.png" alt="Wildlife health">
-        <div class="img-credit">Image credit:<br>UNEP-WCMC
-        </div></div>
+         <img src="assets/images/b_image4.png" alt="Wildlife health">
+      </div>
+      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>(e.g. mapping & monitoring of zoonotic diseases) </h1>
               <button onclick="flip('card-health')">Flip</button>
             </div>
@@ -701,7 +714,7 @@ html:`
       </section>
 
     </div>
-</div
+</div>
   `
 },
 
@@ -732,10 +745,8 @@ html:`
 
       <div class="card-image">
          <img src="assets/images/nc_image1.png" alt="Species">
-         <div class="img-credit">
-          Image credit:<br> created by Wagiman<br>from Noun Project
-        </div>
       </div>
+      <div class="img-credit">Image credit:<br> created by Wagiman<br>from Noun Project</div>
               <h1>i.e. species population sizes /ranges, species richness, community composition</h1>
               <button onclick="flip('card-species')">Flip</button>
             </div>
@@ -765,9 +776,9 @@ html:`
             <div class="card-front">
               <h1>Carbon stocks</h1>
         <div class="card-image">
-        <img src="assets/images/nc_image2.png" alt="Carbon Stocks">
-        <div class="img-credit">Image credit:<br>UNEP-WCMC
-        </div></div>
+         <img src="assets/images/nc_image2.png" alt="Carbon Stocks">
+      </div>
+      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>Above and below-ground biomass, soil organic carbon</h1>
               <button onclick="flip('card-carbon')">Flip</button>
             </div>
@@ -797,9 +808,9 @@ html:`
             <div class="card-front">
               <h1>Habitat / ecosystem extent</h1>
         <div class="card-image">
-        <img src="assets/images/nc_image3.png" alt="Habitat / ecosystem extent">
-        <div class="img-credit">Image credit:<br>UNEP-WCMC
-        </div></div>
+         <img src="assets/images/nc_image3.png" alt="Habitat / ecosystem extent">
+      </div>
+      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>i.e. the physical area covered by an ecological system</h1>
               <button onclick="flip('card-habitat')">Flip</button>
             </div>
@@ -829,9 +840,9 @@ html:`
             <div class="card-front">
               <h1>Habitat / ecosystem condition</h1>
         <div class="card-image">
-        <img src="assets/images/nc_image4.png" alt="Habitat condition">
-        <div class="img-credit">Image credit:<br>UNEP-WCMC
-        </div></div>
+         <img src="assets/images/nc_image4.png" alt="Habitat condition">
+      </div>
+      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>i.e. how healthy or intact is the ecological system</h1>
               <button onclick="flip('card-condition')">Flip</button>
             </div>
@@ -859,7 +870,7 @@ html:`
       </section>
 
     </div>
-</div
+</div>
   `
 },
 
@@ -890,10 +901,8 @@ html:`
 
       <div class="card-image">
          <img src="assets/images/i_image1.png" alt="Global & International Sustainability Frameworks">
-         <div class="img-credit">
-          Image credit:<br> created by Wagiman<br>from Noun Project
-        </div>
       </div>
+      <div class="img-credit">Image credit:<br> created by Wagiman<br>from Noun Project</div>
               <h1>Sustainability Frameworks</h1>
               <button onclick="flip('card-indicator')">Flip</button>
             </div>
@@ -923,9 +932,9 @@ html:`
             <div class="card-front">
               <h1>Biodiversity & Ecosystem</h1>
         <div class="card-image">
-        <img src="assets/images/i_image2.png" alt="Carbon Stocks">
-        <div class="img-credit">Image credit:<br>UNEP-WCMC
-        </div></div>
+         <img src="assets/images/i_image2.png" alt="Carbon Stocks">
+      </div>
+      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>Health Assessment Frameworks</h1>
               <button onclick="flip('card-BEHAF')">Flip</button>
             </div>
@@ -951,9 +960,9 @@ html:`
             <div class="card-front">
               <h1>National Ecosystem</h1>
         <div class="card-image">
-        <img src="assets/images/i_image3.png" alt="National Ecosystem Monitoring & Reporting">
-        <div class="img-credit">Image credit:<br>UNEP-WCMC
-        </div></div>
+         <img src="assets/images/i_image3.png" alt="National Ecosystem Monitoring & Reporting">
+      </div>
+      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>Monitoring & Reporting</h1>
               <button onclick="flip('card-nea')">Flip</button>
             </div>
@@ -979,9 +988,9 @@ html:`
             <div class="card-front">
               <h1>Science-based</h1>
         <div class="card-image">
-        <img src="assets/images/i_image4.png" alt="Science-based Environmental Indicators and metrics">
-        <div class="img-credit">Image credit:<br>UNEP-WCMC
-        </div></div>
+         <img src="assets/images/i_image4.png" alt="Science-based Environmental Indicators and metrics">
+      </div>
+      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>Environmental Indicators and metrics</h1>
               <button onclick="flip('card-metric')">Flip</button>
             </div>
@@ -1005,7 +1014,7 @@ html:`
       </section>
 
     </div>
-</div
+</div>
   `
 },
 
@@ -1036,10 +1045,8 @@ html:`
 
       <div class="card-image">
          <img src="assets/images/m_image1.png" alt="Environmental Impact / Monitoring">
-         <div class="img-credit">
-          Image credit:<br> Image credit: created by Wagiman from Noun Project
-        </div>
       </div>
+      <div class="img-credit">Image credit:<br> Image credit: created by Wagiman from Noun Project</div>
               <h1>e.g. data collection, analysis & reporting as part of an environmental impact assessment</h1>
               <button onclick="flip('card-mon')">Flip</button>
             </div>
@@ -1077,9 +1084,9 @@ html:`
             <div class="card-front">
               <h1>Modeling change / impact of policies</h1>
         <div class="card-image">
-        <img src="assets/images/m_image2.png" alt="Modeling change / impact of policies">
-        <div class="img-credit">Image credit:<br> adapted from images by Suncheli Project, Alena Artemova, WEBTECHOPS LLP, Jihoon Choi, Eike von Pidoll and Mrfa Studio from Noun Project
-        </div></div>
+         <img src="assets/images/m_image2.png" alt="Modeling change / impact of policies">
+      </div>
+      <div class="img-credit">Image credit:<br> adapted from images by Suncheli Project, Alena Artemova, WEBTECHOPS LLP, Jihoon Choi, Eike von Pidoll and Mrfa Studio from Noun Project</div>
               <h1>e.g. tools for modeling potential futures or potential outcomes of implementation of different policy options</h1>
               <button onclick="flip('card-mod')">Flip</button>
             </div>
@@ -1111,7 +1118,7 @@ html:`
       </section>
 
     </div>
-</div
+</div>
   `
 },
 
@@ -1142,10 +1149,8 @@ html:`
 
       <div class="card-image">
          <img src="assets/images/es_image1.png" alt="">
-         <div class="img-credit">
-          Image credit:<br> created by Wagiman<br>from Noun Project
-        </div>
       </div>
+      <div class="img-credit">Image credit:<br> created by Wagiman<br>from Noun Project</div>
               <h1>Mapping & modelling different types of ecosystem sercices, provisioning, regulating and cultural serrvices</h1>
               <button onclick="flip('card-es')">Flip</button>
             </div>
@@ -1173,9 +1178,9 @@ html:`
             <div class="card-front">
               <h1></h1>
         <div class="card-image">
-        <img src="assets/images/es_image2.png" alt="Carbon Stocks">
-        <div class="img-credit">Image credit:<br>UNEP-WCMC
-        </div></div>
+         <img src="assets/images/es_image2.png" alt="Carbon Stocks">
+      </div>
+      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>Mapping & modelling different types of ecosystem sercices, provisioning, regulating and cultural serrvices</h1>
               <button onclick="flip('card-carbon')">Flip</button>
             </div>
@@ -1198,9 +1203,9 @@ html:`
             <div class="card-front">
               <h1></h1>
         <div class="card-image">
-        <img src="assets/images/es_image3.png" alt="Habitat / ecosystem extent">
-        <div class="img-credit">Image credit:<br>UNEP-WCMC
-        </div></div>
+         <img src="assets/images/es_image3.png" alt="Habitat / ecosystem extent">
+      </div>
+      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>Mapping & modelling different types of ecosystem sercices, provisioning, regulating and cultural serrvices</h1>
               <button onclick="flip('card-habitat')">Flip</button>
             </div>
@@ -1226,9 +1231,9 @@ html:`
             <div class="card-front">
               <h1></h1>
         <div class="card-image">
-        <img src="assets/images/es_image4.png" alt="Habitat condition">
-        <div class="img-credit">Image credit:<br>UNEP-WCMC
-        </div></div>
+         <img src="assets/images/es_image4.png" alt="Habitat condition">
+      </div>
+      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>Mapping & modelling different types of ecosystem sercices, provisioning, regulating and cultural serrvices</h1>
               <button onclick="flip('card-condition')">Flip</button>
             </div>
@@ -1252,7 +1257,7 @@ html:`
       </section>
 
     </div>
-</div
+</div>
   `
 },
 
@@ -1283,10 +1288,8 @@ html:`
 
       <div class="card-image">
          <img src="assets/images/nbs_image1.png" alt="tc">
-         <div class="img-credit">
-          Image credit:<br> created by Wagiman<br>from Noun Project
-        </div>
       </div>
+      <div class="img-credit">Image credit:<br> created by Wagiman<br>from Noun Project</div>
               <h1>Explore Tools for planning, designing, & implementing NbS</h1>
               <button onclick="flip('card-nbs1')">Flip</button>
             </div>
@@ -1309,9 +1312,9 @@ html:`
             <div class="card-front">
               <h1></h1>
         <div class="card-image">
-        <img src="assets/images/nbs_image2.png" alt="Carbon Stocks">
-        <div class="img-credit">Image credit:<br>UNEP-WCMC
-        </div></div>
+         <img src="assets/images/nbs_image2.png" alt="Carbon Stocks">
+      </div>
+      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>Climate resilience e.g. Early Warning Systems (flood & heatwave alerts), Climate Risk (vulnerability analysis)</h1>
               <button onclick="flip('card-nbs2')">Flip</button>
             </div>
@@ -1337,9 +1340,9 @@ html:`
             <div class="card-front">
               <h1></h1>
         <div class="card-image">
-        <img src="assets/images/nbs_image3.png" alt="Habitat / ecosystem extent">
-        <div class="img-credit">Image credit:<br>UNEP-WCMC
-        </div></div>
+         <img src="assets/images/nbs_image3.png" alt="Habitat / ecosystem extent">
+      </div>
+      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>Restoration opportunities assessment e.g. restoring forests for soil stabilization and limiting soil erosion </h1>
               <button onclick="flip('card-nbs3')">Flip</button>
             </div>
@@ -1365,9 +1368,9 @@ html:`
             <div class="card-front">
               <h1></h1>
         <div class="card-image">
-        <img src="assets/images/nbs_image4.png" alt="Habitat condition">
-        <div class="img-credit">Image credit:<br>UNEP-WCMC
-        </div></div>
+         <img src="assets/images/nbs_image4.png" alt="Habitat condition">
+      </div>
+      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>Ecosystem-based Adaptation i.e. helping people to adapt to climate change through ecosystem-based approaches </h1>
               <button onclick="flip('card-nbs4')">Flip</button>
             </div>
@@ -1387,7 +1390,7 @@ html:`
       </section>
 
     </div>
-</div
+</div>
   `
 },
 
@@ -1418,10 +1421,8 @@ html:`
 
       <div class="card-image">
          <img src="assets/images/cp_image1.png" alt="Species">
-         <div class="img-credit">
-          Image credit:<br> created by Wagiman<br>from Noun Project
-        </div>
       </div>
+      <div class="img-credit">Image credit:<br> created by Wagiman<br>from Noun Project</div>
               <h1>Systematic Conservation Planning e.g.  identifying priority areas for protection based on quantitative targets)</h1>
               <button onclick="flip('card-cp1')">Flip</button>
             </div>
@@ -1446,9 +1447,9 @@ html:`
             <div class="card-front">
               <h1></h1>
         <div class="card-image">
-        <img src="assets/images/cp_image2.png" alt="Carbon Stocks">
-        <div class="img-credit">Image credit:<br>UNEP-WCMC
-        </div></div>
+         <img src="assets/images/cp_image2.png" alt="Carbon Stocks">
+      </div>
+      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>Marine Spatial planning</h1>
               <button onclick="flip('card-cp2')">Flip</button>
             </div>
@@ -1478,9 +1479,9 @@ html:`
             <div class="card-front">
               <h1></h1>
         <div class="card-image">
-        <img src="assets/images/cp_image3.png" alt="Habitat / ecosystem extent">
-        <div class="img-credit">Image credit:<br>UNEP-WCMC
-        </div></div>
+         <img src="assets/images/cp_image3.png" alt="Habitat / ecosystem extent">
+      </div>
+      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>Restoration prioritisation</h1>
               <button onclick="flip('card-cp3')">Flip</button>
             </div>
@@ -1507,9 +1508,9 @@ greening). </div>
             <div class="card-front">
               <h1></h1>
         <div class="card-image">
-        <img src="assets/images/cp_image4.png" alt="Habitat condition">
-        <div class="img-credit">Image credit:<br>UNEP-WCMC
-        </div></div>
+         <img src="assets/images/cp_image4.png" alt="Habitat condition">
+      </div>
+      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>Connectivity analysis e.g. corridors connecting fragmented landscapes </h1>
               <button onclick="flip('card-cp4')">Flip</button>
             </div>
@@ -1537,7 +1538,7 @@ greening). </div>
       </section>
 
     </div>
-</div
+</div>
   `
 },
 
@@ -1560,6 +1561,7 @@ html:`
     <div class="section-panel">
 
       <img src="assets/images/section4.png" alt="Illustration">
+      <div class="img-credit">Image credit: [Add credit]</div>
 
   <div class="section-text">
      Question -> Tool pathways
@@ -1574,7 +1576,7 @@ html:`
 /* ========= SLIDE 6b (section 4 slides  - ) ========= */
 
 {
-  id:"pathways1",
+  id:"pathways_workflow",
   footer:"full",
   toolnav:true,
   html:`
@@ -1780,7 +1782,7 @@ Navigate to the relevant tool category and explore example tools.
               </div>
 
               <div class="step-title">
-                  (g) Conservation planning
+                  (g) Conservation Planning
               </div>
 
               <div class="step-text">
@@ -1802,7 +1804,7 @@ Navigate to the relevant tool category and explore example tools.
               </div>
 
               <div class="step-title">
-                  (b) Species & Habitat Trends (e) Ecosystem services & valuation
+                  (b) Species & Habitat Trends (e) Ecosystem Services & Valuation
               </div>
 
               <div class="step-text">
@@ -1824,7 +1826,7 @@ Navigate to the relevant tool category and explore example tools.
               </div>
 
               <div class="step-title">
-                  (c) Indicators and metrics
+                  (c) Indicators & Metrics
               </div>
 
               <div class="step-text">
@@ -1839,7 +1841,7 @@ Navigate to the relevant tool category and explore example tools.
 
   <div class="example-footer">
       → Find these tool types in the <strong>Pressure</strong>,
-      <strong>State</strong>,<strong>Benefit</strong>  and <strong>Response</strong> areas of the
+      <strong>State</strong>, <strong>Benefit</strong> and <strong>Response</strong> areas of the
       PSBR Framework.
   </div>
 
@@ -1884,11 +1886,11 @@ Navigate to the relevant tool category and explore example tools.
               </div>
 
               <div class="step-title">
-                  (a) Biodiversity and ecosystem sensitivity
+                  (a) Biodiversity & Ecosystem Sensitivity
               </div>
 
               <div class="step-text">
-                  Understand the location of sensitive species and impacts on biodiversity .
+                  Understand the location of sensitive species and impacts on biodiversity.
               </div>
 
           </div>
@@ -1906,7 +1908,7 @@ Navigate to the relevant tool category and explore example tools.
               </div>
 
               <div class="step-title">
-                  (b) Species & Habitat Trends (e) Ecosystem services & valuation
+                  (b) Species & Habitat Trends (e) Ecosystem Services & Valuation
               </div>
 
               <div class="step-text">
@@ -1928,7 +1930,7 @@ Navigate to the relevant tool category and explore example tools.
               </div>
 
               <div class="step-title">
-                  (d) Change Monitoring and Modelling
+                  (d) Change Monitoring & Modelling
               </div>
 
               <div class="step-text">
@@ -1943,7 +1945,7 @@ Navigate to the relevant tool category and explore example tools.
 
   <div class="example-footer">
       → Find these tool types in the <strong>Pressure</strong>,
-      <strong>State</strong>,<strong>Benefit</strong>  and <strong>Response</strong> areas of the
+      <strong>State</strong>, <strong>Benefit</strong> and <strong>Response</strong> areas of the
       PSBR Framework.
   </div>
 
@@ -1983,8 +1985,12 @@ Navigate to the relevant tool category and explore example tools.
 
           <div class="step-content">
 
+              <div class="step-heading">
+                  START BY EXPLORING TOOLS FOR
+              </div>
+
               <div class="step-title">
-                  (b) Species & Habitat Trends (e) Ecosystem services & valuation
+                  (b) Species & Habitat Trends (e) Ecosystem Services & Valuation
               </div>
 
               <div class="step-text">
@@ -2010,7 +2016,7 @@ Navigate to the relevant tool category and explore example tools.
               </div>
 
               <div class="step-text">
-                  To Identify priority areas for sustainable managementent of forests.
+                  To identify priority areas for sustainable management of forests.
               </div>
 
           </div>
@@ -2032,7 +2038,7 @@ Navigate to the relevant tool category and explore example tools.
               </div>
 
               <div class="step-text">
-                  To help understand pressures that may be a barrier to sustainable management .
+                  To help understand pressures that may be a barrier to sustainable management.
               </div>
 
           </div>
@@ -2043,7 +2049,7 @@ Navigate to the relevant tool category and explore example tools.
 
   <div class="example-footer">
       → Find these tool types in the <strong>Pressure</strong>,
-      <strong>State</strong>,<strong>Benefit</strong>  and <strong>Response</strong> areas of the
+      <strong>State</strong>, <strong>Benefit</strong> and <strong>Response</strong> areas of the
       PSBR Framework.
   </div>
 
@@ -2088,11 +2094,11 @@ Navigate to the relevant tool category and explore example tools.
               </div>
 
               <div class="step-title">
-                  (b) Species & Habitat Trends
+                  (a) Biodiversity & Ecosystem Sensitivity
               </div>
 
               <div class="step-text">
-                  Explore tools that help with understanding the distribution of species and natural capital.
+                  Identify the pressures driving habitat loss and which ecosystems are most sensitive to them.
               </div>
 
           </div>
@@ -2106,15 +2112,15 @@ Navigate to the relevant tool category and explore example tools.
           <div class="step-content">
 
               <div class="step-heading">
-                  ALSO EXPLORE TOOLS FOR MODELLING OR MONITORING POTENTIAL IMPACTS
+                  ALSO EXPLORE
               </div>
 
               <div class="step-title">
-                  (c) Indicators and metrics
+                  (b) Species & Habitat Trends
               </div>
 
               <div class="step-text">
-                  Use to help understand the drivers of change.
+                  Understand the distribution of species and natural capital, and how it has changed over time.
               </div>
 
           </div>
@@ -2132,11 +2138,11 @@ Navigate to the relevant tool category and explore example tools.
               </div>
 
               <div class="step-title">
-                  (d) Change Monitoring and Modelling
+                  (d) Change Monitoring & Modelling
               </div>
 
               <div class="step-text">
-                  Environmental Impact Assessment and Monitoring of habitat change and pressures.
+                  Environmental impact assessment and monitoring of habitat change and pressures.
               </div>
 
           </div>
@@ -2147,7 +2153,7 @@ Navigate to the relevant tool category and explore example tools.
 
   <div class="example-footer">
       → Find these tool types in the <strong>Pressure</strong>,
-      <strong>State</strong and <strong>Response</strong> areas of the
+      <strong>State</strong> and <strong>Response</strong> areas of the
       PSBR Framework.
   </div>
 
@@ -2155,7 +2161,191 @@ Navigate to the relevant tool category and explore example tools.
 
 `
 },
-/* ========= SLIDE 7a (section 5 slides  - ) ========= */
+/* ========= SLIDE 6h (section 4 slides  - ) ========= */
+{
+  id:"exaample6",
+  footer:"full",
+  toolnav:true,
+  html:`
+
+<div class="example-slide">
+
+  <div class="example-header">
+      <div class="example-tag">EXAMPLE 6</div>
+      <div class="example-title">National Adaptation Planning</div>
+  </div>
+
+  <div class="policy-box">
+      <div class="policy-label">Policy Question:</div>
+
+      <div class="policy-question">
+      "Are nature-based solutions a viable alternative to grey infrastructure for coastal climate adaptation?"
+      </div>
+  </div>
+
+  <div class="example-panel">
+
+      <div class="example-step">
+
+          <div class="step-number">1</div>
+
+          <div class="step-content">
+
+              <div class="step-heading">
+                  START BY EXPLORING TOOLS FOR
+              </div>
+
+              <div class="step-title">
+                  (a) Biodiversity & Ecosystem Sensitivity
+              </div>
+
+              <div class="step-text">
+                  Identify which coastal ecosystems, such as mangroves, coral reefs and wetlands, are most sensitive to climate impacts like sea-level rise and storm surge.
+              </div>
+
+          </div>
+
+      </div>
+
+      <div class="example-step">
+
+          <div class="step-number">2</div>
+
+          <div class="step-content">
+
+              <div class="step-heading">
+                  ALSO EXPLORE
+              </div>
+
+              <div class="step-title">
+                  (f) Nature-Based Solutions & Adaptation
+              </div>
+
+              <div class="step-text">
+                  Explore ecosystem-based adaptation options, such as mangrove restoration, that can buffer coastal communities from climate impacts.
+              </div>
+
+          </div>
+
+      </div>
+
+      <div class="example-step">
+
+          <div class="step-number">3</div>
+
+          <div class="step-content">
+
+              <div class="step-heading">
+                  CONSIDER MODELLING FUTURE SCENARIOS
+              </div>
+
+              <div class="step-title">
+                  (d) Change Monitoring & Modelling
+              </div>
+
+              <div class="step-text">
+                  Model future sea-level rise and coastal erosion scenarios to inform where adaptation measures will be most effective.
+              </div>
+
+          </div>
+
+      </div>
+
+  </div>
+
+  <div class="example-footer">
+      → Find these tool types in the <strong>Pressure</strong>,
+      <strong>State</strong>, <strong>Benefit</strong> and <strong>Response</strong> areas of the
+      PSBR Framework.
+  </div>
+
+</div>
+
+`
+},
+/* ========= SLIDE 6i - Blank interactive example (fill your own) ========= */
+{
+  id:"exampleBlank1",
+  footer:"full",
+  toolnav:true,
+  html:`
+
+<div class="example-slide">
+
+  <div class="example-header">
+      <div class="example-tag">YOUR EXAMPLE</div>
+      <div class="example-title editable-field" id="blankTitle" contenteditable="true" oninput="saveBlankExample()" data-placeholder="Give your example a title..."></div>
+  </div>
+
+  <div class="policy-box">
+      <div class="policy-label">Policy Question:</div>
+
+      <div class="policy-question editable-field" id="blankQuestion" contenteditable="true" oninput="saveBlankExample()" data-placeholder="Type your own policy question here..."></div>
+  </div>
+
+  <div class="example-panel">
+
+      <div class="example-step">
+
+          <div class="step-number">1</div>
+
+          <div class="step-content">
+
+              <div class="step-heading editable-field" id="blankStep1Heading" contenteditable="true" oninput="saveBlankExample()" data-placeholder="STEP INSTRUCTION (e.g. START BY EXPLORING TOOLS FOR)"></div>
+
+              <div class="step-title editable-field" id="blankStep1Title" contenteditable="true" oninput="saveBlankExample()" data-placeholder="(a) Typology category"></div>
+
+              <div class="step-text editable-field" id="blankStep1Text" contenteditable="true" oninput="saveBlankExample()" data-placeholder="Why is this tool type relevant to your question?"></div>
+
+          </div>
+
+      </div>
+
+      <div class="example-step">
+
+          <div class="step-number">2</div>
+
+          <div class="step-content">
+
+              <div class="step-heading editable-field" id="blankStep2Heading" contenteditable="true" oninput="saveBlankExample()" data-placeholder="STEP INSTRUCTION (e.g. ALSO EXPLORE)"></div>
+
+              <div class="step-title editable-field" id="blankStep2Title" contenteditable="true" oninput="saveBlankExample()" data-placeholder="(b) Typology category"></div>
+
+              <div class="step-text editable-field" id="blankStep2Text" contenteditable="true" oninput="saveBlankExample()" data-placeholder="Why is this tool type relevant to your question?"></div>
+
+          </div>
+
+      </div>
+
+      <div class="example-step">
+
+          <div class="step-number">3</div>
+
+          <div class="step-content">
+
+              <div class="step-heading editable-field" id="blankStep3Heading" contenteditable="true" oninput="saveBlankExample()" data-placeholder="STEP INSTRUCTION (e.g. CONSIDER)"></div>
+
+              <div class="step-title editable-field" id="blankStep3Title" contenteditable="true" oninput="saveBlankExample()" data-placeholder="(c) Typology category"></div>
+
+              <div class="step-text editable-field" id="blankStep3Text" contenteditable="true" oninput="saveBlankExample()" data-placeholder="Why is this tool type relevant to your question?"></div>
+
+          </div>
+
+      </div>
+
+  </div>
+
+  <div class="example-footer editable-field" id="blankFooter" contenteditable="true" oninput="saveBlankExample()" data-placeholder="→ Find these tool types in the ... areas of the PSBR Framework."></div>
+
+  <div class="blank-example-actions">
+      <button class="clear-btn" onclick="clearBlankExample()">Clear</button>
+      <button class="download-btn" onclick="downloadBlankExample()">⬇ Save my example</button>
+  </div>
+
+</div>
+
+`
+},
 {
   id:"resources1",
   footer:"full",
@@ -2174,6 +2364,7 @@ html:`
     <div class="section-panel">
 
       <img src="assets/images/resources.png" alt="Illustration">
+      <div class="img-credit">Image credit: [Add credit]</div>
 
   <div class="section-text">
      Best practice -> Definitions
@@ -2185,6 +2376,139 @@ html:`
 `
 },
 
+/* ============== SLIDE 8a ================ */
+{
+id:"bestpractice1",
+footer:"full",
+
+html:`
+
+<div class="slide-frame top">
+
+<div class="medium2-slide-heading bp-slide-heading">
+Best Practices for Working with Spatial Data
+</div>
+
+<div class="bp-grid">
+
+<div class="bp-card">
+<div class="bp-accent bp-green"></div>
+
+<div class="bp-content">
+
+<h2>👥 Stakeholder Engagement</h2>
+
+<ul>
+<li>Engage decision-makers early in the tool selection process.</li>
+
+<li>Include communities, technical experts and policy-makers throughout implementation.</li>
+
+<li>Gather feedback regularly to improve the workflow and build ownership.</li>
+
+<li>Adopt high-quality Free, Prior and Informed Consent (FPIC) processes when working with Indigenous Peoples and local communities.</li>
+</ul>
+
+<div class="bp-resource">
+Further guidance:<br>
+
+<a href="https://www.unsdglearn.org/courses/stakeholder-engagement/"
+target="_blank">
+Stakeholder engagement and how to strengthen multistakeholder participation
+</a>
+
+</div>
+</div>
+</div>
+
+<div class="bp-card">
+<div class="bp-accent bp-green"></div>
+
+<div class="bp-content">
+
+<h2>🗄 Data Quality Assessment</h2>
+
+<ul>
+<li>Evaluate data availability, completeness and reliability.</li>
+
+<li>Understand uncertainty and potential sources of bias.</li>
+
+<li>Plan data cleaning and validation before analysis begins.</li>
+</ul>
+<br>
+<div class="bp-resource">
+Further guidance:<br>
+
+<a href="https://unbiodiversitylab.org/wp-content/uploads/2021/01/Global-Biodiversity-Data-Fitness-Assessment.pdf"
+target="_blank">
+Global Biodiversity Data Fitness Assessment
+</a>
+
+</div>
+
+</div>
+</div>
+
+<div class="bp-card">
+<div class="bp-accent bp-brown"></div>
+
+<div class="bp-content">
+
+<h2>🎓 Training & Capacity Building</h2>
+
+<ul>
+<li>Invest in staff training and spatial analysis skills.</li>
+
+<li>Develop clear documentation and standard workflows.</li>
+
+<li>Create knowledge transfer plans for long-term sustainability.</li>
+
+<li>Integrate training on Indigenous and Local Knowledge (ILK) and participatory methods.</li>
+</ul>
+
+<div class="bp-resource">
+Further guidance:<br>
+
+<a href="https://elearning.staging.wordpress-linode.linode.unep-wcmc.org/courses/oil-for-development-e-learning-module-1/"
+target="_blank">
+Module 1: An introduction to Spatial data for Biodiversity
+</a>
+<br>
+<a href="https://elearning.staging.wordpress-linode.linode.unep-wcmc.org/courses/oil-for-development-e-learning-module-1-2/"
+target="_blank">
+Module 2: The role of Environmental data in area-based planning
+</a>
+</div>
+</div>
+</div>
+
+<div class="bp-card">
+<div class="bp-accent bp-brown"></div>
+
+<div class="bp-content">
+
+<h2>👥 Data Principles & Informed Consent</h2>
+
+<ul>
+<li><strong>Fair</strong> — minimise bias in data collection and analysis.</li>
+
+<li><strong>Care</strong> — protect sensitive biodiversity and community information.</li>
+
+<li><strong>Consent</strong> — ensure appropriate permissions for data use.</li>
+<br><br>
+</ul>
+
+<div class="bp-resource">
+↓ Explore the FAIR and CARE Principles in more detail on the following slides.
+</div>
+
+</div>
+
+</div>
+
+`
+},
+
+/*=================side 8b ======================*/
 /* ================================
 ===============FLIP CARDS 8b FAIR===============*/
 
@@ -2272,8 +2596,6 @@ html:`
         </div>
 
         <div class="flipcard">
-
-        <div class="flipcard">
           <div class="card-inner" id="card-REUSABLE">
             <div class="card-front">
       <div class="card-image">
@@ -2294,12 +2616,10 @@ html:`
           </div>
         </div>
 
-        <div class="flipcard">
-
       </section>
 
     </div>
-</div
+</div>
   `
 },
 
@@ -2390,8 +2710,6 @@ html:`
         </div>
 
         <div class="flipcard">
-
-        <div class="flipcard">
           <div class="card-inner" id="card-ETHICS">
             <div class="card-front">
       <div class="card-image">
@@ -2412,12 +2730,10 @@ html:`
           </div>
         </div>
 
-        <div class="flipcard">
-
       </section>
 
     </div>
-</div
+</div>
   `
 },
 
@@ -2425,7 +2741,7 @@ html:`
 ===============FLIP CARDS 8d Gender and human rights===============*/
 
 {
-  id: "careflip1",
+  id: "genderflip1",
   footer: "full",
   toolnav:false,
   html: `
@@ -2450,6 +2766,7 @@ html:`
       <div class="card-image">
          <img src="assets/images/gender.png" alt="gender">
       </div>
+      <div class="img-credit">Image credit: [Add credit]</div>
       <h1>Guidelines and frameworks for understanding how to apply gender considerations in spatial analysis and planning</h1>
               <button onclick="flip('card-gender')">Flip</button>
             </div>
@@ -2457,7 +2774,7 @@ html:`
               <h4>Key Features</h4>
               <ul>
         <li class="tool-item">
-        <div class="tool-desc">1. The UN-Habitat Guidelines for Gender Mainstreaming in Spatial Planning provide recommentations and best practice guidance on integrating gender equality into urban planning<br><br>
+        <div class="tool-desc">1. The UN-Habitat Guidelines for Gender Mainstreaming in Spatial Planning provide recommendations and best practice guidance on integrating gender equality into urban planning<br><br>
 2. The Marine Spatial Planning (MSP) Gender and Poverty Framework focuses on ensuring that gender equality and poverty reduction are integrated into the marine spatial planning process.</div>
         </li>
               </ul>
@@ -2472,6 +2789,7 @@ html:`
       <div class="card-image">
          <img src="assets/images/servir.png" alt="servir">
       </div>
+      <div class="img-credit">Image credit: [Add credit]</div>
       <h1>Gender analysis tools that guides service design and programming to ensure both women and men benefit equally from geospatial services.</h1>
               <button onclick="flip('card-servir')">Flip</button>
             </div>
@@ -2493,6 +2811,7 @@ html:`
       <div class="card-image">
          <img src="assets/images/g3.png" alt="g3">
       </div>
+      <div class="img-credit">Image credit: [Add credit]</div>
       <h1>THEORETICAL-METHODOLOGICAL
 FRAMEWORK FOR GEOSPATIAL
 ANALYSIS AND GENDER STATISTICS
@@ -2517,6 +2836,7 @@ Approach for integrating gender statistics into geospatial analysis,and guide th
       <div class="card-image">
          <img src="assets/images/g4.png" alt="g4">
       </div>
+      <div class="img-credit">Image credit: [Add credit]</div>
       <h1>Ethical considerations in data collection, analysis, and decision-making</h1>
               <button onclick="flip('card-g4')">Flip</button>
             </div>
@@ -2538,145 +2858,139 @@ Includes a checklist for ethical use of geospatial technologies for evidence gen
       </section>
 
     </div>
-</div
+</div>
   `
 },
 
-/* ============== SLIDE 8a ================ */
+/* ================================
+===============FLIP CARDS 8e Human Rights & Land Resources===============*/
+
 {
-id:"bestpractice1",
-footer:"full",
+  id: "hrlandresources1",
+  footer: "full",
+  toolnav:false,
+  html: `
 
-html:`
+<div class="slide tools-section">
+  <!-- tools content & buttons -->
+  <div class="slide-frame top">
 
-<div class="slide-frame top">
+  <div class="medium2-slide-heading">
+  Further tools and guidance for applying a human rights-based approach
+  </div>
 
-<div class="medium2-slide-heading">
-Best Practices for Working with Spatial Data
+      <section class="flipcard-row">
+
+        <div class="flipcard2">
+          <div class="card-inner" id="card-dihr">
+            <div class="card-front">
+      <div class="card-image">
+         <img src="assets/images/dihr_env.png" alt="DIHR Human Rights Tools">
+      </div>
+      <div class="img-credit">Image credit: [Add credit]</div>
+      <h1>DIHR: Human Rights and Environment Explorer & Land Navigator</h1>
+              <button onclick="flip('card-dihr')">Flip</button>
+            </div>
+            <div class="card-back">
+              <h4>Key Features</h4>
+              <ul>
+        <li class="tool-item">
+        <div class="tool-desc"><strong>Human Rights and Environment Explorer</strong> — Danish Institute for Human Rights (DIHR) tool for searching treaties and court decisions relevant to the environment, including spatial planning.</div>
+        <a href="https://environment.humanrights.dk/" target="_blank">Visit resource</a>
+        </li>
+        <li class="tool-item">
+        <div class="tool-desc"><strong>Human Rights and Land Navigator</strong> — DIHR tool that helps identify which human rights standards are relevant to land-related decisions, including land use and tenure.</div>
+        <a href="https://www.humanrights.dk/tools/human-rights-land-navigator" target="_blank">Visit resource</a>
+        </li>
+              </ul>
+              <button onclick="flip('card-dihr')">Flip back</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flipcard2">
+          <div class="card-inner" id="card-iccs-fpp">
+            <div class="card-front">
+      <div class="card-image">
+         <img src="assets/images/iccs_fpp.png" alt="Conservation and Human Rights: An Introduction">
+      </div>
+      <div class="img-credit">Image credit: [Add credit]</div>
+      <h1>Conservation and Human Rights: An Introduction</h1>
+              <button onclick="flip('card-iccs-fpp')">Flip</button>
+            </div>
+            <div class="card-back">
+              <h4>Key Features</h4>
+              <ul>
+        <li class="tool-item">
+        <div class="tool-desc">Guidance from Oxford University's Interdisciplinary Centre for Conservation Science (ICCS) and Forest Peoples Programme (FPP) on applying a Human Rights-Based Approach (HRBA) in conservation, including in spatial planning.</div>
+        <a href="https://iccs.org.uk/conservation-equity-and-rights/conservation-and-human-rights-an-introduction/" target="_blank">Visit resource</a>
+        </li>
+              </ul>
+              <button onclick="flip('card-iccs-fpp')">Flip back</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flipcard2">
+          <div class="card-inner" id="card-afi">
+            <div class="card-front">
+      <div class="card-image">
+         <img src="assets/images/afi.png" alt="Accountability Framework Initiative">
+      </div>
+      <div class="img-credit">Image credit: [Add credit]</div>
+      <h1>Accountability Framework Initiative</h1>
+              <button onclick="flip('card-afi')">Flip</button>
+            </div>
+            <div class="card-back">
+              <h4>Key Features</h4>
+              <ul>
+        <li class="tool-item">
+        <div class="tool-desc">A shared roadmap for ethical supply chains, including guidance for assessing and addressing human rights impacts of land use change.</div>
+        <a href="https://accountability-framework.org/about/about-the-afi/" target="_blank">Visit resource</a>
+        </li>
+              </ul>
+              <button onclick="flip('card-afi')">Flip back</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flipcard2">
+          <div class="card-inner" id="card-gbf-target3">
+            <div class="card-front">
+      <div class="card-image">
+         <img src="assets/images/gbf_target3.png" alt="WWF and IUCN Guide to Target 3 of the GBF">
+      </div>
+      <div class="img-credit">Image credit: [Add credit]</div>
+      <h1>Guide to Target 3 of the Kunming-Montreal Global Biodiversity Framework</h1>
+              <button onclick="flip('card-gbf-target3')">Flip</button>
+            </div>
+            <div class="card-back">
+              <h4>Key Features</h4>
+              <ul>
+        <li class="tool-item">
+        <div class="tool-desc">WWF and IUCN guidance on inclusive, equitable and effective implementation of Target 3 (30x30), covering rights-based approaches to expanding protected and conserved areas.</div>
+        <a href="https://iucn.org/sites/default/files/2023-09/30x30-target-framework.pdf" target="_blank">Visit resource</a>
+        </li>
+              </ul>
+              <button onclick="flip('card-gbf-target3')">Flip back</button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="further-reading-footer">
+        Further reading:
+        <a href="https://datascience.codata.org/articles/10.5334/dsj-2026-003" target="_blank">Implementing the FAIR and CARE Principles Simultaneously: Emerging Insights from IPBES</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.openglobalrights.org/geospatial-technology-can-improve-human-rights-documentation/" target="_blank">Open Global Rights: How geospatial technology can improve human rights documentation</a>
+      </div>
+
+    </div>
 </div>
-
-<div class="bp-grid">
-
-<div class="bp-card">
-<div class="bp-accent bp-green"></div>
-
-<div class="bp-content">
-
-<h2>👥 Stakeholder Engagement</h2>
-
-<ul>
-<li>Engage decision-makers early in the tool selection process.</li>
-
-<li>Include communities, technical experts and policy-makers throughout implementation.</li>
-
-<li>Gather feedback regularly to improve the workflow and build ownership.</li>
-</ul>
-
-<div class="bp-resource">
-Further guidance:<br>
-
-<a href="https://www.unsdglearn.org/courses/stakeholder-engagement/"
-target="_blank">
-Stakeholder engagement and how to strengthen multistakeholder participation
-</a>
-
-</div>
-</div>
-</div>
-
-<div class="bp-card">
-<div class="bp-accent bp-green"></div>
-
-<div class="bp-content">
-
-<h2>🗄 Data Quality Assessment</h2>
-
-<ul>
-<li>Evaluate data availability, completeness and reliability.</li>
-
-<li>Understand uncertainty and potential sources of bias.</li>
-
-<li>Plan data cleaning and validation before analysis begins.</li>
-</ul>
-<br>
-<div class="bp-resource">
-Further guidance:<br>
-
-<a href="https://unbiodiversitylab.org/wp-content/uploads/2021/01/Global-Biodiversity-Data-Fitness-Assessment.pdf"
-target="_blank">
-Global Biodiversity Data Fitness Assessment
-</a>
-
-</div>
-
-</div>
-</div>
-
-<div class="bp-card">
-<div class="bp-accent bp-brown"></div>
-
-<div class="bp-content">
-
-<h2>🎓 Training & Capacity Building</h2>
-
-<ul>
-<li>Invest in staff training and spatial analysis skills.</li>
-
-<li>Develop clear documentation and standard workflows.</li>
-
-<li>Create knowledge transfer plans for long-term sustainability.</li>
-</ul>
-
-<div class="bp-resource">
-Further guidance:<br>
-
-<a href="https://elearning.staging.wordpress-linode.linode.unep-wcmc.org/courses/oil-for-development-e-learning-module-1/"
-target="_blank">
-Module 1: An introduction to Spatial data for Biodiversity
-</a>
-<br>
-<a href="https://elearning.staging.wordpress-linode.linode.unep-wcmc.org/courses/oil-for-development-e-learning-module-1-2/"
-target="_blank">
-Module 2: The role of Environmental data in area-based planning
-</a>
-</div>
-</div>
-</div>
-
-<div class="bp-card">
-<div class="bp-accent bp-brown"></div>
-
-<div class="bp-content">
-
-<h2>👥 Data Principles & Informed Consent</h2>
-
-<ul>
-<li><strong>Fair</strong> — minimise bias in data collection and analysis.</li>
-
-<li><strong>Care</strong> — protect sensitive biodiversity and community information.</li>
-
-<li><strong>Consent</strong> — ensure appropriate permissions for data use.</li>
-
-</ul>
-
-<div class="bp-resource">
-Further guidance:<br>
-
-<a href="https://datascience.codata.org/articles/10.5334/dsj-2026-003"
-target="_blank">
-Implementing the FAIR and CARE Principles Simultaneously: Emerging Insights from IPBES
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-`
+  `
 },
 
-/*=================side 8b ======================*/
 /* ========= SLIDE 9 – Maintaining Good Spatial Analysis Practice ========= */
 {
 id:"bestpractice2",
@@ -2686,14 +3000,30 @@ html:`
 
 <div class="slide-frame top">
 
-<div class="medium2-slide-heading">
-Maintaining Good Spatial Analysis Practice
+<div class="medium2-slide-heading closing-heading">
+A Few Last Tips
 </div>
 
-<div class="practice-flow">
+<div class="practice-footer">
+Build time into projects to test, validate, refine and document your analyses.
+</div>
 
+<div class="closing-layout">
+
+  <!-- LEFT: compass visual, echoing the Tool Typology navigation section -->
+  <div class="closing-visual">
+    <img src="assets/images/compass.png" alt="Tool typology compass">
+    <p class="closing-tagline">You've navigated the <br>full tool typology.<br>Keep these practices in mind as you explore tools to<br>support your work.</p>
+  </div>
+
+  <!-- RIGHT: practice steps -->
+  <div class="practice-flow">
   <div class="practice-step">
-
+      <div class="practice-text">
+          <h2>Don't be afraid to explore, or ask for help</h2>
+      </div>
+  </div>
+  <div class="practice-step">
       <div class="practice-text">
           <h2>Test your workflow</h2>
           <p>
@@ -2701,9 +3031,7 @@ Maintaining Good Spatial Analysis Practice
           </p>
       </div>
   </div>
-
   <div class="practice-step">
-
       <div class="practice-text">
           <h2>Validate your outputs</h2>
           <p>
@@ -2711,9 +3039,7 @@ Maintaining Good Spatial Analysis Practice
           </p>
       </div>
   </div>
-
   <div class="practice-step">
-
       <div class="practice-text">
           <h2>Iteratively refine</h2>
           <p>
@@ -2721,25 +3047,19 @@ Maintaining Good Spatial Analysis Practice
           </p>
       </div>
   </div>
-
   <div class="practice-step">
-
       <div class="practice-text">
           <h2>Document decisions</h2>
           <p>
           Record assumptions, data sources and analytical choices to ensure transparency and reproducibility.
           </p>
+		  <br>
       </div>
   </div>
-
-</div>
-
-<div class="practice-footer">
-
-Build time into projects to test, validate, refine and document your analyses.<br><br>
+  </div>
 </div>
 <div class="practice-footer2">
-<h4>We hope you have found this interactive guide useful in building your understanding of the spatial tools and analyses available to support nature-related mapping and decision-making. This guide has provided an introductory overview and examples of some of the tools that can be used to address biodiversity conservation and environmental challenges. We encourage you to continue exploring additional tools, methods, and resources beyond those presented here.<h4>
+<h4>We hope you have found this useful. With so many tools available, the typology helps you filter through to what's relevant, guided by good practice around data governance, gender and human rights, and responsible spatial analysis. Take it with you as you continue exploring.</h4>
 
 </div>
 
@@ -2790,8 +3110,160 @@ Please see full terms and conditions of use here https://www.unep-wcmc.org/en/te
 
 let current = 0;
 
+// Holds the user's checklist/notes state so it survives navigating away
+// from and back to the policy_checklist slide, and survives an accidental
+// page refresh. Backed by sessionStorage, which clears automatically
+// when the browser tab is closed - matching "persist until the user exits."
+const POLICY_NOTES_KEY = "policyNotesState";
+
+function loadPolicyNotes(){
+  try {
+    const saved = sessionStorage.getItem(POLICY_NOTES_KEY);
+    if (saved) return JSON.parse(saved);
+  } catch (e) {
+    // sessionStorage unavailable (e.g. opened via file://) - fall back to defaults
+  }
+  return { reviewed: false, inventoried: false, gaps: false, notes: "" };
+}
+
+function savePolicyNotes(){
+  try {
+    sessionStorage.setItem(POLICY_NOTES_KEY, JSON.stringify(policyNotesState));
+  } catch (e) {
+    // sessionStorage unavailable - state will only persist in memory for this session
+  }
+}
+
+let policyNotesState = loadPolicyNotes();
+
 function flip(id) {
   document.getElementById(id).classList.toggle("flipped");
+}
+
+function downloadPolicyNotes(){
+  const items = [
+    { id: "chk-reviewed", label: "Reviewed existing analyses" },
+    { id: "chk-inventoried", label: "Inventoried spatial data" },
+    { id: "chk-gaps", label: "Identified gaps" }
+  ];
+
+  let checklistText = items.map(item => {
+    const checked = document.getElementById(item.id)?.checked;
+    return `[${checked ? "x" : " "}] ${item.label}`;
+  }).join("\n");
+
+  const notesEl = document.getElementById("policyNotesText");
+  const notesText = notesEl ? notesEl.innerText.trim() : "";
+
+  const content =
+`Analysis 101: A typology of tools
+Policy context checklist and notes
+Downloaded: ${new Date().toLocaleString()}
+
+Checklist:
+${checklistText}
+
+Notes:
+${notesText || "(no notes entered)"}
+`;
+
+  const blob = new Blob([content], { type: "text/plain" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "policy-context-notes.txt";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+const BLANK_EXAMPLE_FIELDS = [
+  "blankTitle", "blankQuestion",
+  "blankStep1Heading", "blankStep1Title", "blankStep1Text",
+  "blankStep2Heading", "blankStep2Title", "blankStep2Text",
+  "blankStep3Heading", "blankStep3Title", "blankStep3Text",
+  "blankFooter"
+];
+
+const BLANK_EXAMPLE_KEY = "blankExampleState";
+
+function saveBlankExample(){
+  const state = {};
+  BLANK_EXAMPLE_FIELDS.forEach(id => {
+    const el = document.getElementById(id);
+    state[id] = el ? el.innerText : "";
+  });
+  try {
+    sessionStorage.setItem(BLANK_EXAMPLE_KEY, JSON.stringify(state));
+  } catch (e) {
+    // sessionStorage unavailable - field content will only persist in the DOM for this render
+  }
+}
+
+function restoreBlankExample(){
+  let state = {};
+  try {
+    const saved = sessionStorage.getItem(BLANK_EXAMPLE_KEY);
+    if (saved) state = JSON.parse(saved);
+  } catch (e) {
+    // sessionStorage unavailable - fields stay blank
+  }
+  BLANK_EXAMPLE_FIELDS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.innerText = state[id] || "";
+  });
+}
+
+function clearBlankExample(){
+  BLANK_EXAMPLE_FIELDS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.innerText = "";
+  });
+  try {
+    sessionStorage.removeItem(BLANK_EXAMPLE_KEY);
+  } catch (e) {
+    // sessionStorage unavailable - nothing further to clear
+  }
+}
+
+function downloadBlankExample(){
+  const get = id => document.getElementById(id)?.innerText.trim() || "";
+
+  const content =
+`Analysis 101: A typology of tools
+Your own worked example
+Downloaded: ${new Date().toLocaleString()}
+
+Title: ${get("blankTitle") || "(no title entered)"}
+
+Policy Question:
+${get("blankQuestion") || "(no question entered)"}
+
+Step 1: ${get("blankStep1Heading") || "(no heading entered)"}
+${get("blankStep1Title") || "(no typology category entered)"}
+${get("blankStep1Text") || "(no explanation entered)"}
+
+Step 2: ${get("blankStep2Heading") || "(no heading entered)"}
+${get("blankStep2Title") || "(no typology category entered)"}
+${get("blankStep2Text") || "(no explanation entered)"}
+
+Step 3: ${get("blankStep3Heading") || "(no heading entered)"}
+${get("blankStep3Title") || "(no typology category entered)"}
+${get("blankStep3Text") || "(no explanation entered)"}
+
+${get("blankFooter") || "(no PSBR summary entered)"}
+`;
+
+  const blob = new Blob([content], { type: "text/plain" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "my-policy-question-example.txt";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
 
 const slide = document.getElementById("slide");
@@ -2800,6 +3272,23 @@ const footer = document.getElementById("footer");
 function render(){
   slide.innerHTML = slides[current].html;
   renderFooter();
+  if(slides[current].id === 'policy_checklist'){
+    restorePolicyNotes();
+  }
+  if(slides[current].id === 'exampleBlank1'){
+    restoreBlankExample();
+  }
+}
+
+function restorePolicyNotes(){
+  const reviewed = document.getElementById('chk-reviewed');
+  const inventoried = document.getElementById('chk-inventoried');
+  const gaps = document.getElementById('chk-gaps');
+  const notesEl = document.getElementById('policyNotesText');
+  if(reviewed) reviewed.checked = policyNotesState.reviewed;
+  if(inventoried) inventoried.checked = policyNotesState.inventoried;
+  if(gaps) gaps.checked = policyNotesState.gaps;
+  if(notesEl) notesEl.innerText = policyNotesState.notes;
 }
 
 function renderFooter(){
