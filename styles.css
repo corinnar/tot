@@ -1,0 +1,1442 @@
+:root {
+  --teal:#1f6f68;
+  --teal-dark:#134f49;
+  --yellow:#FFF3A7;
+  --cream:#f5f3e9;
+  --brown:#8c7a5b;
+}
+
+html,body{
+  margin:0;
+  height:100%;
+}
+
+body{
+  background:var(--teal);
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  font-family:"PT Sans", Arial, sans-serif;
+}
+
+/* ===== Canvas ===== */
+#slide{
+  flex:1;
+  position:relative;
+  padding:4vh 4vw 0px;
+  box-sizing:border-box;
+}
+
+/* ===== Headings ===== */
+h1,h2{
+  font-family:"Nixie One", cursive;
+  margin:0;
+}
+
+/* ======== INTRO SLIDE (LOCKED – DO NOT CHANGE) ======== */
+.slide-home{ position:relative; height:100%; }
+
+.home-title{
+  text-align:center;
+  margin-bottom: 30px;
+}
+
+.home-title h1{ font-size:3.2rem; }
+.home-title h2{ font-size:1.2rem; margin-top:0.5rem; }
+
+.home-illustration{
+  display:flex;
+  justify-content:center;
+  margin-top:4vh;
+}
+
+.home-illustration img{
+  max-width:100%;
+  height:auto;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.25));
+}
+
+.home-bottom-band{
+  position:absolute;
+  bottom:0px;
+  left:-4vw;
+  width:calc(100% + 8vw);
+  height:110px;
+  background:rgba(255,255,255,0.1);
+  display:grid;
+  grid-template-columns:1fr 1.6fr 1fr;
+  align-items:center;
+  padding:0 4vw;
+  box-sizing:border-box;
+}
+
+.home-logos{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.home-logos img{
+  height: 32px;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+/* bottom version override */
+.home-logos--bottom{
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+}
+
+.home-logos--bottom img{
+  height: 52px;
+  max-width: 100px;
+  object-fit: contain;
+}
+
+.home-credit{
+  text-align:center;
+  font-size:0.85rem;
+  font-family:"PT Sans Narrow", sans-serif;
+}
+
+.home-note{
+  font-size:0.8rem;
+  font-family:"PT Sans Narrow", sans-serif;
+  max-width:300px;
+  justify-self:end;
+}
+
+.start-btn {
+  background: #0078d4;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  animation: pulse 1s infinite;
+}
+
+.start-btn:hover {
+  background: #00a651;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #DAA06D;
+  }
+  50% {
+    background-color: #36454F;
+  }
+  100% {
+    background-color: #E1C16E;
+  }
+}
+
+/* ===== Generic content slides ===== */
+.slide{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.slide ul, .slide ol{
+  margin-top:1rem;
+}
+
+.slide-frame{
+  position: relative;
+}
+
+.gs-note{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:5px;              /* adjust this number */
+
+  width:85%;
+
+  text-align:center;
+  font-family:"PT Sans Narrow", sans-serif;
+  font-size:1.2rem;
+  line-height:1.35;
+
+  color:var(--cream);
+}
+
+.workflow{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    margin-top:60px;
+}
+
+.workflow-card{
+
+    width:320px;
+    height:350px;
+
+    background:#f4f4ef;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    color:#333;
+
+    box-sizing:border-box;
+
+    position:relative;
+}
+
+.workflow-card h2{
+
+    margin-top:20px;
+
+    margin-bottom:20px;
+
+    font-family:"PT Sans Narrow",sans-serif;
+
+    font-size:2rem;
+
+    color:#222;
+}
+
+.workflow-card p{
+
+    font-size:1.2rem;
+
+    line-height:1.5;
+}
+
+.workflow-arrow{
+
+    font-size:3rem;
+
+    color:white;
+}
+
+.step-icon{
+
+    width:54px;
+    height:54px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+
+    font-weight:bold;
+
+    font-size:1.5rem;
+}
+
+.step-icon.green{
+    background:#2d7c63;
+}
+
+.step-icon.yellow{
+    background:#f3c623;
+    color:#333;
+}
+
+.step-icon.orange{
+    background:#d97b19;
+}
+
+/* ============================
+   Example pathway slide
+============================ */
+
+.example-slide{
+    width:92%;
+    margin:auto;
+}
+
+.example-header{
+    display:flex;
+    align-items:center;
+    gap:35px;
+    margin-bottom:10px;
+}
+
+.example-tag{
+
+    background:var(--brown);
+    color:white;
+
+    font-family:"Nixie One", cursive;
+    font-size:2.0rem;
+
+    padding:12px 22px;
+}
+
+.example-title{
+
+    font-family:"Nixie One", cursive;
+    color:var(--cream);
+
+    font-size:3.1rem;
+}
+
+.policy-box{
+
+    background:#ece6dc;
+
+    padding:22px 45px;
+
+    margin-bottom:12px;
+}
+
+.policy-label{
+
+    font-family:"Nixie One", cursive;
+
+    color:#6d665b;
+
+    font-size:1.8rem;
+
+    margin-bottom:14px;
+}
+
+.policy-question{
+
+    font-size:1.5rem;
+
+    color:#333;
+}
+
+.example-panel{
+
+    background:#b9cbc3;
+
+    padding:18px 26px;
+}
+
+.example-step{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:26px;
+
+    align-items:flex-start;
+}
+
+.step-number{
+
+    width:76px;
+    height:76x;
+
+    border-radius:50%;
+
+    background:var(--brown);
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:1.5rem;
+
+    flex-shrink:0;
+}
+
+.step-heading{
+
+    font-family:"Nixie One", cursive;
+
+    font-size:1.15rem;
+
+    color:#3d3325;
+
+    font-weight:bold;
+
+    text-transform:uppercase;
+
+    margin-bottom:2px;
+}
+
+.step-title{
+
+    font-size:1.5rem;
+
+    font-weight:bold;
+
+    color:#2f2f2f;
+
+    margin-bottom:2px;
+}
+
+.step-text{
+
+    font-size:1.25rem;
+
+    color:white;
+}
+
+.example-footer{
+
+    background:var(--brown);
+
+    color:white;
+
+    padding:16px 20px;
+
+    font-size:1.5rem;
+}
+
+/* ==========================================
+   BEST PRACTICE SLIDES
+==========================================*/
+
+.bp-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:5px;
+    margin-top:0px;
+}
+
+.bp-card{
+    background:#f4f4ef;
+    border-radius:22px;
+    display:flex;
+    overflow:hidden;
+    min-height:200px;
+}
+
+.bp-accent{
+    width:14px;
+    flex-shrink:0;
+}
+
+.bp-green{background:#9dbd2d;}
+.bp-brown{background:#8c7a5b;}
+
+.bp-content{
+    padding:24px 28px;
+    color:#333;
+    flex:1;
+}
+
+.bp-content h2{
+    font-family:"PT Sans Narrow", sans-serif;
+    font-size:2.0rem;
+    margin:0 0 15px 0;
+    color:#222;
+}
+
+.bp-content p,
+.bp-content li{
+    font-family:"PT Sans", sans-serif;
+    font-size:1.05rem;
+    line-height:1.2;
+}
+
+.bp-content ul{
+    margin:0;
+    padding-left:20px;
+}
+
+.bp-content strong{
+    color:#222;
+}
+
+.bp-resource{
+    margin-top:5px;
+    font-family:"PT Sans Narrow", sans-serif;
+    font-size:1rem;
+}
+
+.bp-resource a{
+    color:#333;
+    font-weight:bold;
+}
+
+.bp-takeaway{
+    margin-top:35px;
+    text-align:center;
+    font-family:"PT Sans Narrow", sans-serif;
+    font-size:1.35rem;
+    color:var(--cream);
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* second slide */
+
+.bp-large{
+    width:82%;
+    margin:45px auto;
+}
+
+.bp-large .bp-card{
+    min-height:320px;
+}
+
+.bp-large h2{
+    font-size:2.5rem;
+}
+
+.bp-large li{
+    font-size:1.25rem;
+    margin-bottom:10px;
+}
+
+.bp-highlight{
+    margin-top:30px;
+    text-align:center;
+    font-size:1.5rem;
+    font-family:"PT Sans Narrow",sans-serif;
+    color:var(--cream);
+    width:85%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/*==================================================
+        BEST PRACTICE SLIDE 2
+==================================================*/
+
+.practice-flow{
+
+    width:100%;
+    margin:20px auto;
+
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+}
+
+.practice-step{
+
+    display:flex;
+    align-items:flex-start;
+    gap:2px;
+}
+
+.practice-text{
+
+    flex:1;
+
+    background:var(--cream);
+
+    border-left:18px solid var(--brown);
+
+    border-radius:18px;
+
+    padding:10px 15px;
+
+    color:#333;
+}
+
+.practice-text h2{
+
+    margin:0 0 8px;
+
+    font-family:"PT Sans Narrow", sans-serif;
+
+    font-size:1.5rem;
+
+    color:var(--brown);
+}
+
+.practice-text p{
+
+    margin:0;
+
+    font-size:1.15rem;
+
+    line-height:1;
+}
+
+.practice-footer{
+
+    width:100%;
+
+    margin:10px auto 0;
+
+    text-align:center;
+
+    color:var(--cream);
+
+    font-family:"PT Sans Narrow", sans-serif;
+
+    font-size:1.5rem;
+
+    line-height:1;
+}
+
+.practice-footer2{
+
+    width:100%;
+
+    margin:10px auto 0;
+
+    text-align:center;
+
+    color:var(--yellow);
+
+    font-family:"PT Sans Narrow", sans-serif;
+
+    font-size:1.5rem;
+
+    line-height:1;
+}
+
+/* ===== Footer ===== */
+
+.footer{
+  background:var(--teal-dark);
+
+  display:flex;
+  flex-direction:column;
+
+  justify-content:center;
+  align-items:stretch;
+
+  font-family:"PT Sans Narrow", sans-serif;
+
+  padding:0.3rem 0;
+}
+
+.footer button{
+  background:none;
+  border:1px solid #fff;
+  color:#fff;
+  padding:0.4rem 0.7rem;
+  cursor:pointer;
+}
+
+.footer-center button.active-main {
+  background: var(--cream);
+  color: var(--brown);
+  border: 1px solid #5a3e2b;
+}
+
+.tool-nav{
+  display:flex;
+  justify-content:center;
+  gap:0.4rem;
+
+  margin-bottom:0.3rem;
+}
+
+.tool-nav button{
+  background: #6faea8;  /*  light teal */
+  color: var(--teal-dark);
+
+  border: 2px solid var(--teal-dark);
+
+  font-weight: bold;
+
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+
+  cursor: pointer;
+}
+
+.tool-nav button.active {
+  background: var(--cream);
+  color: var(--brown);
+  border-color: var(--teal);
+}
+
+.footer-main{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+
+/* ===== Slide 2 layout ===== */
+
+/* Big slide heading */
+.slide-heading{
+  text-align:center;
+  font-family:"Nixie One", cursive;
+  font-size:3.6rem;
+  margin-bottom:30px;
+}
+
+.slide-heading p{
+  font-size: clamp(1.8rem, 4.5vh, 3.6rem);
+  line-height:1.3;
+}
+
+.small-slide-heading p{
+  text-align:center;
+  font-family:"Nixie One", cursive;
+  font-size:1.5rem;
+  margin-bottom:30px;
+}
+
+.medium-slide-heading{
+  text-align:center;
+  font-family:"Nixie One", cursive;
+  font-size:2rem;      /* adjust as you like */
+  margin-bottom:60px;
+  color:var(--cream);
+}
+
+.medium2-slide-heading{
+  text-align:center;
+  font-family:"Nixie One", cursive;
+  font-size:3rem;      /* adjust as you like */
+  margin-bottom:60px;
+  color:var(--cream);
+}
+
+.medium4-slide-heading{
+  text-align:center;
+  font-family:"Nixie One", cursive;
+  font-size:1.7rem;      /* adjust as you like */
+  margin-bottom:60px;
+  color:var(--cream);
+}
+
+/* Big section heading */
+.section-heading{
+  text-align:center;
+  font-family:"Nixie One", cursive;
+  font-size: clamp(4.6rem, 6vh, 5.6rem);
+  margin-bottom:30px;
+}
+
+/* small section text */
+.section-text{
+  text-align:center;
+  font-family:"Nixie One", cursive;
+  font-size: clamp(1.6rem, 4vh, 3rem);
+  margin-bottom:0px;
+  font-weight: bold;
+}
+
+.slide-two{
+  display:grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap:40px;
+  align-items:start;
+  margin-top:40px;
+}
+
+/* Left column boxes */
+.nav-box{
+  background:#d9d2c3;
+  color:#333;
+  border-radius:4px;
+  overflow:hidden;
+  margin-bottom:20px;
+}
+
+.nav-box h3{
+  margin:0;
+  padding:10px;
+  background:#8c7a5b;
+  color:#fff;
+  font-size:2rem;
+  font-family:"PT Sans Narrow", sans-serif;
+}
+
+.nav-box ul{
+  list-style:none;
+  margin:0;
+  padding:10px;
+  font-size:1rem;
+}
+
+.nav-box li{
+  margin-bottom:6px;
+}
+
+/* Right panel */
+.intro-panel{
+  border:2px solid rgba(255,255,255,0.6);
+  border-radius:8px;
+  padding:20px;
+  text-align:center;
+}
+
+.intro-panel h2{
+  font-family:"Nixie One", cursive;
+  margin-bottom:40px;
+}
+
+.intro-panel img{
+  max-width:200px;
+  margin:15px 0;
+}
+
+.intro-panel p{
+  font-size:1rem;
+  line-height:1.4;
+}
+
+/* section panel */
+.section-panel{
+  text-align:center;
+}
+
+.section-panel h2{
+  font-family:"Nixie One", cursive;
+  margin-bottom:30px;
+}
+
+.section-panel p{
+  font-size:5.2rem;
+  line-height:1.4;
+}
+
+.section-panel img{
+}
+
+/* small section text */
+.section-text{
+  text-align:center;
+  font-family:"Nixie One", cursive;
+  font-size:3.0rem;
+  margin-bottom:30px;
+  font-weight: bold;
+}
+
+/* Left column boxes */
+.snav-box{
+  background:#FFF6B6;
+  color:#8c7a5b;
+  overflow:hidden;
+  margin-bottom:5px;
+}
+
+.snav-box h3{
+  margin:0;
+  padding:5px;
+  background:#8c7a5b;
+  color:#fff;
+  font-size:1.5rem;
+  font-family:"PT Sans Narrow", sans-serif;
+}
+
+.snav-box ul{
+  list-style:none;
+  margin:0;
+  padding:5px;
+  font-size:1.5rem;
+}
+
+.snav-box li{
+  margin-bottom:5px;
+  list-style: none;
+  padding-left: 40;
+}
+
+/* ===== Slide 3c layout ===== */
+.slide-3c{
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Left column */
+.slide-3c-left{
+  text-align: left;
+}
+
+.slide-3c-left .context-title{
+  font-family: "Nixie One", cursive;
+  font-size: 3.4rem;
+  text-align:center;
+  margin-bottom: 10px;
+  margin-right:20px;
+}
+
+.slide-3c-left .context-question{
+  font-family: "Nixie One", cursive;
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+/* Right column */
+.slide-3c-right{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* =====================================================
+   GLOBAL SLIDE SYSTEM (Non-destructive)
+   ===================================================== */
+
+/* Viewport minus footer */
+:root{
+  --footer-height: 70px;
+}
+
+/* Slide viewport */
+#slide{
+  height: calc(100vh - var(--footer-height));
+  overflow: hidden;
+  padding: 4vh 4vw;
+  box-sizing: border-box;
+}
+
+/* Universal slide container */
+.slide-frame{
+  height: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Section slides (headings + content) */
+.slide-frame.section{
+  gap: 2vh;
+}
+
+/* Content slides that need top alignment */
+.slide-frame.top{
+  justify-content: flex-start;
+}
+
+/* Image safety */
+.slide img{
+  max-height: 50vh;
+  width: auto;
+  max-width: 100%;
+}
+
+.tick::before {
+  content: "✓";
+  margin-right: 1rem;
+  color: green;
+  font-weight: bold;
+}
+
+.cross::before {
+  content: "✗";
+  margin-right: 1rem;
+  color: green;
+  font-weight: bold;
+}
+
+.snav-box ul{
+  list-style: none;
+  padding-left: 40;
+}
+
+.notes-box{
+  background: #ffffff;
+  color: #333;
+  border: 2px dashed #8c7a5b;
+  padding:40px;
+  margin-top: 8px;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* =========================================
+   PSBR FRAMEWORK LAYOUT
+========================================= */
+
+.psbr-layout{
+  display:grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap:40px;
+  align-items:center;
+
+  margin-top:20px;
+}
+
+.psbr-column{
+  display:flex;
+  flex-direction:column;
+  gap:150px;
+}
+
+.psbr-center{
+  position:relative;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.psbr-image{
+  width:240%;
+  max-width:2000px;
+  object-fit:contain;
+}
+
+/* Questions around circle */
+
+.psbr-question{
+  position:absolute;
+
+  font-family:"PT Sans Narrow", sans-serif;
+  font-weight:bold;
+
+  color:white;
+
+  text-align:center;
+
+  width:220px;
+
+  font-size:1rem;
+  line-height:1.2;
+}
+
+.psbr-question.top{
+  top:-20px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.psbr-question.bottom{
+  bottom:-40px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.psbr-question.left{
+  left:-280px;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.psbr-question.right{
+  right:-280px;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+/* Slightly larger PSBR boxes */
+
+.psbr-box h3{
+  font-size:2.0rem;
+}
+
+.psbr-box ul{
+  font-size:1rem;
+  line-height:1.5;
+}
+
+.psbr-question2{
+  position:absolute;
+
+  font-family:"PT Sans Narrow", sans-serif;
+  font-weight:bold;
+
+  color:gold;
+
+  text-align:center;
+
+  width:220px;
+
+  font-size:1rem;
+  line-height:1.2;
+}
+
+.psbr-question2.top{
+  top:70px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.psbr-question2.bottom{
+  bottom:50px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.psbr-question2.left{
+  left:-50px;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.psbr-question2.right{
+  right:-50px;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+/* =========================================
+   POLICY THEMES SLIDE
+========================================= */
+.themes-wrapper{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:20px;
+}
+
+.themes-box{
+  width:700px;
+
+  background:#8c7a5b; /* brown */
+
+  color:#FFF6B6; /* cream text */
+
+  padding:35px 55px;
+
+  border-radius:18px; /* more curved corners */
+
+  border:3px solid #FFF6B6; /* cream outline */
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.25);
+}
+
+.themes-box h2{
+  text-align:center;
+
+  margin-top:0;
+  margin-bottom:25px;
+
+  color:#FFF6B6; /* cream */
+
+  font-family:"Nixie One", cursive;
+
+  font-size:2.2rem;
+}
+
+.themes-box ul{
+  list-style:none;
+
+  padding:0;
+  margin:0;
+}
+
+.themes-box li{
+  font-size:1.35rem;
+
+  line-height:1;
+
+  margin-bottom:10px;
+
+  color:#FFF6E5; /* ensure list text stays cream */
+}
+
+/* =========================================
+   GENERIC SOFTWARE SLIDES
+========================================= */
+.gs-wrapper{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:20px;
+}
+
+.gs-box{
+  width:2500px;
+
+  background:#8c7a5b; /* brown */
+
+  color:#FFF6B6; /* cream text */
+
+  padding:35px 55px;
+
+  border-radius:18px; /* more curved corners */
+
+  border:3px solid #FFF6B6; /* cream outline */
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.25);
+}
+
+.gs-box h2{
+  text-align:center;
+
+  margin-top:0;
+  margin-bottom:25px;
+
+  color:#FFF6B6; /* cream */
+
+  font-family:"Nixie One", cursive;
+
+  font-size:2rem;
+}
+
+.gs-box ul{
+  list-style:none;
+
+  padding:0;
+  margin:0;
+}
+
+.gs-box li{
+  font-size:1.35rem;
+
+  line-height:1;
+
+  margin-bottom:10px;
+
+  color:#FFF6E5; /* ensure list text stays cream */
+}
+
+.prototype-link{
+
+    margin-top:20px;
+
+    display:flex;
+
+    justify-content:center;
+}
+
+.prototype-link a{
+
+    display:inline-block;
+
+    padding:5px 15px;
+
+    border-radius:50px;
+
+    background:var(--cream);
+
+    color:var(--teal-dark);
+
+    text-decoration:none;
+
+    font-family:"PT Sans Narrow", sans-serif;
+
+    font-size:1rem;
+
+    font-weight:bold;
+
+    transition:0.25s;
+}
+
+.prototype-link a:hover{
+
+    background:var(--yellow);
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
+}
+
+/*===================================
+          FLIP CARDS
+=====================================*/
+
+/* Card row */
+.flipcard-row {
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 90vw;
+
+}
+
+/* Card container */
+.flipcard {
+  width: 250px;
+  height: 460px;
+  perspective: 1200px;
+}
+
+/* Card container */
+.flipcard2 {
+  width: 250px;
+  height: 400px;
+  perspective: 1200px;
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  position: relative;
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: transparent;
+}
+
+.img-credit {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  font-size: 0.7rem;
+  color: var(--teal-dark);
+  text-align:center;
+  padding: 1rem;
+
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  z-index: 2;
+
+}
+
+.card-image:hover .img-credit {
+  opacity: 1;
+}
+
+/* Inner flip system */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Front & back */
+.card-front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--yellow);
+  backface-visibility: hidden;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--text-dark);
+}
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--brown);
+  backface-visibility: hidden;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--text-light);
+}
+
+.card-front h1 {
+  font-family:"PT Sans Narrow", sans-serif;
+  color:var(--brown);
+  text-align:center;
+  font-size: 1rem;
+  z-index: 1;
+}
+
+.card-front h2 {
+  font-family:"PT Sans Narrow", sans-serif;
+  color:var(--brown);
+  text-align:center;
+  font-size: 2rem;
+  z-index: 1;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  font-family:"PT Sans Narrow", sans-serif;
+  color:var(--cream);
+  text-align:center;
+  font-size: 1rem;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  backface-visibility: hidden;
+
+  z-index: 2;           /* important for clickability */
+  pointer-events: auto; /* ensures links are clickable */
+}
+
+.card-back h3 {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+}
+
+.card-back h4 {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+}
+
+.card-back ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.tool-item {
+  margin-bottom: 0.8rem;
+}
+
+.tool-item a {
+  font-weight: bold;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.tool-desc {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-top: 0.2rem;
+  line-height: 1.2;
+}
+
+.res-desc {
+  font-size: 2rem;
+  opacity: 0.9;
+  margin-top: 0.2rem;
+  line-height: 1.2;
+}
+
+.tool-item a:hover {
+  color: var(--teal-dark);
+}
+
+button {
+  align-self: center;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid #444;
+  background: none;
+  cursor: pointer;
+}
+
+/* Bottom nav */
+.bottom-nav {
+  height: 70px;
+  background: #144f49;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom-nav button {
+  color: white;
+  background: none;
+  border: none;
+}
+
