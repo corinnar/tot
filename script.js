@@ -1,58 +1,10 @@
 const slides = [
 
-/* ========= SLIDE 1 – INTRO (LOCKED) ========= */
+/* ========= SLIDE 1 - Combined home + overview ========= */
 {
   id:"home",
-  footer:"start",
-  html:`
-    <div class="slide-home">
-
-      <div class="home-title">
-        <h1>Analysis 101: A typology of tools</h1>
-        <h2>A Framework for Exploring Biodiversity Spatial Planning Tools</h2>
-      </div>
-
-      <div class="home-illustration">
-        <img src="assets/images/tot1.png" alt="Analysis 101 illustration">
-      </div>
-
-      <div class="home-bottom-band">
-
-        <div class="home-logos">
-          <img src="assets/logos/norad.png" alt="Norad logo">
-          <img src="assets/logos/unep-wcmc.png" alt="UNEP-WCMC logo">
-          <img src="assets/logos/nea.png" alt="NEA logo">
-        </div>
-
-        <div class="home-credit">
-          developed by UNEP-WCMC on behalf of Norad<br>
-          (the Norwegian Agency for Development Cooperation)
-        </div>
-
-        <div class="home-note">
-          Note: This is a prototype app; contents are illustrative and may contain
-          errors or omissions.
-
-    <div class="prototype-link">
-
-    <a href="http://3.64.251.154/explorer/">
-    ...or try the alternative NEA prototype →
-    </a>
-
-    </div>
-        </div>
-
-      </div>
-
-    </div>
-  `
-},
-
-/* ========= SLIDE 2 (overview)========= */
-{
-  id:"overview",
   footer:"full",
-html:`
+  html:`
   <div class="slide">
 
     <div class="slide-heading">
@@ -96,12 +48,31 @@ html:`
           the conservation landscape, or to guide you towards the types
           of tools and methods that can help address those questions.
         </p>
+
+        <div class="intro-panel-actions">
+          <button class="start-btn" onclick="next()">Start Guided Tour</button>
+          <div class="prototype-link">
+            <a href="http://3.64.251.154/explorer/">
+            ...or try the alternative NEA prototype →
+            </a>
+          </div>
+        </div>
       </div>
 
     </div>
 
+    <div class="home-logos">
+      <img src="assets/logos/norad.png" alt="Norad logo">
+      <img src="assets/logos/unep-wcmc.png" alt="UNEP-WCMC logo">
+      <img src="assets/logos/nea.png" alt="NEA logo">
+    </div>
+
+    <div class="home-footer-note">
+      developed by UNEP-WCMC on behalf of Norad (the Norwegian Agency for Development Cooperation). This app is currently a prototype and therefore the contents are illustrative and may contain some errors or omissions.
+    </div>
+
   </div>
-`
+  `
 },
 
 /* ========= SLIDE 3a (section 1 slides 3-6) ========= */
@@ -187,6 +158,7 @@ html:`
   <div class="slide-3c-right">
 
     <div class="snav-box question-list">
+      <h3>Example Questions</h3>
       <ul>
         <li>Which areas face greatest biodiversity risk?</li>
         <li>How vulnerable are ecosystems to climate change?</li>
@@ -259,6 +231,13 @@ html:`
     </div>
 
 <div class="notes-box">
+  <strong>Policy Question:</strong>
+  <div class="notes-editable policy-question-editable"
+       id="policyQuestionText"
+       contenteditable="true"
+       data-placeholder="Type your own policy question here..."
+       oninput="policyNotesState.policyQuestion=this.innerText; savePolicyNotes();">
+  </div>
   <strong>Notes:</strong>
   <div class="notes-editable"
        id="policyNotesText"
@@ -2964,7 +2943,7 @@ function loadPolicyNotes(){
   } catch (e) {
     // sessionStorage unavailable (e.g. opened via file://) - fall back to defaults
   }
-  return { reviewed: false, inventoried: false, gaps: false, notes: "" };
+  return { reviewed: false, inventoried: false, gaps: false, policyQuestion: "", notes: "" };
 }
 
 function savePolicyNotes(){
@@ -2993,6 +2972,9 @@ function downloadPolicyNotes(){
     return `[${checked ? "x" : " "}] ${item.label}`;
   }).join("\n");
 
+  const questionEl = document.getElementById("policyQuestionText");
+  const questionText = questionEl ? questionEl.innerText.trim() : "";
+
   const notesEl = document.getElementById("policyNotesText");
   const notesText = notesEl ? notesEl.innerText.trim() : "";
 
@@ -3003,6 +2985,9 @@ Downloaded: ${new Date().toLocaleString()}
 
 Checklist:
 ${checklistText}
+
+Policy Question:
+${questionText || "(no policy question entered)"}
 
 Notes:
 ${notesText || "(no notes entered)"}
@@ -3184,10 +3169,12 @@ function restorePolicyNotes(){
   const reviewed = document.getElementById('chk-reviewed');
   const inventoried = document.getElementById('chk-inventoried');
   const gaps = document.getElementById('chk-gaps');
+  const questionEl = document.getElementById('policyQuestionText');
   const notesEl = document.getElementById('policyNotesText');
   if(reviewed) reviewed.checked = policyNotesState.reviewed;
   if(inventoried) inventoried.checked = policyNotesState.inventoried;
   if(gaps) gaps.checked = policyNotesState.gaps;
+  if(questionEl) questionEl.innerText = policyNotesState.policyQuestion || "";
   if(notesEl) notesEl.innerText = policyNotesState.notes;
 }
 
