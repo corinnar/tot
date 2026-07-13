@@ -849,8 +849,12 @@ h1,h2{
 
   font-weight: bold;
 
-  padding: 0.5rem 0.8rem;
-  font-size: 1rem;
+  padding: 0.4rem 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.15;
+  white-space: normal;
+  text-align: center;
+  max-width: 150px;
   flex-shrink: 0;
 
   cursor: pointer;
