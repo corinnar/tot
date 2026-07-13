@@ -14,7 +14,6 @@ const slides = [
 
       <div class="home-illustration">
         <img src="assets/images/tot1.png" alt="Analysis 101 illustration">
-        <div class="img-credit">Image credits: adapted from images by ani rofiqah, Suncheli Project, Olivia Haberme, Amethyst Studio, WEBTECHOPS LLP, Jihoon Choi and Adrien Coquet from Noun Project</div>
       </div>
 
       <div class="home-bottom-band">
@@ -1595,13 +1594,14 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">1</div>
-
           <div class="step-content">
 
-              <div class="step-heading">
+          <div class="step-heading-row">
+          <div class="step-number">1</div>
+          <div class="step-heading">
                   START BY EXPLORING TOOLS FOR
               </div>
+          </div>
 
               <div class="step-title">
                   (a) Biodiversity & Ecosystem Sensitivity
@@ -1617,13 +1617,14 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">2</div>
-
           <div class="step-content">
 
-              <div class="step-heading">
+          <div class="step-heading-row">
+          <div class="step-number">2</div>
+          <div class="step-heading">
                   CONSIDER THE STATE AND DISTRIBUTION OF NATURAL CAPITAL
               </div>
+          </div>
 
               <div class="step-title">
                   (b) Species & Habitat Trends
@@ -1640,13 +1641,14 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">3</div>
-
           <div class="step-content">
 
-              <div class="step-heading">
+          <div class="step-heading-row">
+          <div class="step-number">3</div>
+          <div class="step-heading">
                   EXPLORE
               </div>
+          </div>
 
               <div class="step-title">
                   (d) Change Monitoring & Modelling
@@ -1700,13 +1702,14 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">1</div>
-
           <div class="step-content">
 
-              <div class="step-heading">
+          <div class="step-heading-row">
+          <div class="step-number">1</div>
+          <div class="step-heading">
                   START BY EXPLORING TOOLS FOR
               </div>
+          </div>
 
               <div class="step-title">
                   (g) Conservation Planning
@@ -1722,13 +1725,14 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">2</div>
-
           <div class="step-content">
 
-              <div class="step-heading">
+          <div class="step-heading-row">
+          <div class="step-number">2</div>
+          <div class="step-heading">
                   ALSO EXPLORE
               </div>
+          </div>
 
               <div class="step-title">
                   (b) Species & Habitat Trends (e) Ecosystem Services & Valuation
@@ -1744,13 +1748,14 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">3</div>
-
           <div class="step-content">
 
-              <div class="step-heading">
+          <div class="step-heading-row">
+          <div class="step-number">3</div>
+          <div class="step-heading">
                   CONSIDER WHAT METRICS AND INDICATORS ARE RELEVANT
               </div>
+          </div>
 
               <div class="step-title">
                   (c) Indicators & Metrics
@@ -1804,13 +1809,14 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">1</div>
-
           <div class="step-content">
 
-              <div class="step-heading">
+          <div class="step-heading-row">
+          <div class="step-number">1</div>
+          <div class="step-heading">
                   START BY EXPLORING TOOLS FOR
               </div>
+          </div>
 
               <div class="step-title">
                   (a) Biodiversity & Ecosystem Sensitivity
@@ -1826,13 +1832,14 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">2</div>
-
           <div class="step-content">
 
-              <div class="step-heading">
+          <div class="step-heading-row">
+          <div class="step-number">2</div>
+          <div class="step-heading">
                   ALSO EXPLORE
               </div>
+          </div>
 
               <div class="step-title">
                   (b) Species & Habitat Trends (e) Ecosystem Services & Valuation
@@ -1848,13 +1855,14 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">3</div>
-
           <div class="step-content">
 
-              <div class="step-heading">
+          <div class="step-heading-row">
+          <div class="step-number">3</div>
+          <div class="step-heading">
                   CONSIDER MODELLING OR MONITORING POTENTIAL IMPACTS
               </div>
+          </div>
 
               <div class="step-title">
                   (d) Change Monitoring & Modelling
@@ -1908,13 +1916,14 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">1</div>
-
           <div class="step-content">
 
-              <div class="step-heading">
+          <div class="step-heading-row">
+          <div class="step-number">1</div>
+          <div class="step-heading">
                   START BY EXPLORING TOOLS FOR
               </div>
+          </div>
 
               <div class="step-title">
                   (b) Species & Habitat Trends (e) Ecosystem Services & Valuation
@@ -1930,13 +1939,14 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">2</div>
-
           <div class="step-content">
 
-              <div class="step-heading">
+          <div class="step-heading-row">
+          <div class="step-number">2</div>
+          <div class="step-heading">
                   ALSO EXPLORE
               </div>
+          </div>
 
               <div class="step-title">
                   (g) Conservation Planning
@@ -1952,13 +1962,14 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">3</div>
-
           <div class="step-content">
 
-              <div class="step-heading">
+          <div class="step-heading-row">
+          <div class="step-number">3</div>
+          <div class="step-heading">
                   CONSIDER BIODIVERSITY AND ECOSYSTEM SENSITIVITY
               </div>
+          </div>
 
               <div class="step-title">
                   (a) Biodiversity & Ecosystem Sensitivity
@@ -2012,13 +2023,14 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">1</div>
-
           <div class="step-content">
 
-              <div class="step-heading">
+          <div class="step-heading-row">
+          <div class="step-number">1</div>
+          <div class="step-heading">
                   START BY EXPLORING TOOLS FOR
               </div>
+          </div>
 
               <div class="step-title">
                   (a) Biodiversity & Ecosystem Sensitivity
@@ -2034,13 +2046,14 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">2</div>
-
           <div class="step-content">
 
-              <div class="step-heading">
+          <div class="step-heading-row">
+          <div class="step-number">2</div>
+          <div class="step-heading">
                   ALSO EXPLORE
               </div>
+          </div>
 
               <div class="step-title">
                   (b) Species & Habitat Trends
@@ -2056,13 +2069,14 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">3</div>
-
           <div class="step-content">
 
-              <div class="step-heading">
+          <div class="step-heading-row">
+          <div class="step-number">3</div>
+          <div class="step-heading">
                   CONSIDER TOOLS FOR MONITORING CHANGE
               </div>
+          </div>
 
               <div class="step-title">
                   (d) Change Monitoring & Modelling
@@ -2114,13 +2128,14 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">1</div>
-
           <div class="step-content">
 
-              <div class="step-heading">
+          <div class="step-heading-row">
+          <div class="step-number">1</div>
+          <div class="step-heading">
                   START BY EXPLORING TOOLS FOR
               </div>
+          </div>
 
               <div class="step-title">
                   (a) Biodiversity & Ecosystem Sensitivity
@@ -2136,13 +2151,14 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">2</div>
-
           <div class="step-content">
 
-              <div class="step-heading">
+          <div class="step-heading-row">
+          <div class="step-number">2</div>
+          <div class="step-heading">
                   ALSO EXPLORE
               </div>
+          </div>
 
               <div class="step-title">
                   (f) Nature-Based Solutions & Adaptation
@@ -2158,13 +2174,14 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">3</div>
-
           <div class="step-content">
 
-              <div class="step-heading">
+          <div class="step-heading-row">
+          <div class="step-number">3</div>
+          <div class="step-heading">
                   CONSIDER MODELLING FUTURE SCENARIOS
               </div>
+          </div>
 
               <div class="step-title">
                   (d) Change Monitoring & Modelling
@@ -2214,11 +2231,12 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">1</div>
-
           <div class="step-content">
 
-              <div class="step-heading editable-field" id="blankStep1Heading" contenteditable="true" oninput="saveBlankExample()" data-placeholder="STEP INSTRUCTION (e.g. START BY EXPLORING TOOLS FOR)"></div>
+          <div class="step-heading-row">
+          <div class="step-number">1</div>
+          <div class="step-heading editable-field" id="blankStep1Heading" contenteditable="true" oninput="saveBlankExample()" data-placeholder="STEP INSTRUCTION (e.g. START BY EXPLORING TOOLS FOR)"></div>
+          </div>
 
               <div class="step-title editable-field" id="blankStep1Title" contenteditable="true" oninput="saveBlankExample()" data-placeholder="(?) Typology category"></div>
 
@@ -2230,11 +2248,12 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">2</div>
-
           <div class="step-content">
 
-              <div class="step-heading editable-field" id="blankStep2Heading" contenteditable="true" oninput="saveBlankExample()" data-placeholder="STEP INSTRUCTION (e.g. ALSO EXPLORE)"></div>
+          <div class="step-heading-row">
+          <div class="step-number">2</div>
+          <div class="step-heading editable-field" id="blankStep2Heading" contenteditable="true" oninput="saveBlankExample()" data-placeholder="STEP INSTRUCTION (e.g. ALSO EXPLORE)"></div>
+          </div>
 
               <div class="step-title editable-field" id="blankStep2Title" contenteditable="true" oninput="saveBlankExample()" data-placeholder="(?) Typology category"></div>
 
@@ -2246,11 +2265,12 @@ Navigate to the relevant tool category and explore example tools.
 
       <div class="example-step">
 
-          <div class="step-number">3</div>
-
           <div class="step-content">
 
-              <div class="step-heading editable-field" id="blankStep3Heading" contenteditable="true" oninput="saveBlankExample()" data-placeholder="STEP INSTRUCTION (e.g. CONSIDER)"></div>
+          <div class="step-heading-row">
+          <div class="step-number">3</div>
+          <div class="step-heading editable-field" id="blankStep3Heading" contenteditable="true" oninput="saveBlankExample()" data-placeholder="STEP INSTRUCTION (e.g. CONSIDER)"></div>
+          </div>
 
               <div class="step-title editable-field" id="blankStep3Title" contenteditable="true" oninput="saveBlankExample()" data-placeholder="(?) Typology category"></div>
 
@@ -2466,7 +2486,7 @@ Module 2: The role of Environmental data in area-based planning
           <div class="card-inner" id="card-FINDABLE">
             <div class="card-front">
       <div class="card-image">
-         <img src="assets/images/F.png" alt="FINDABLE">
+         <img src="assets/images/f.png" alt="FINDABLE">
       </div>
       <h2>FINDABLE</h2>
               <button onclick="flip('card-FINDABLE')">Flip</button>
@@ -2487,7 +2507,7 @@ Module 2: The role of Environmental data in area-based planning
           <div class="card-inner" id="card-ACCESSIBLE">
             <div class="card-front">
       <div class="card-image">
-         <img src="assets/images/A.png" alt="ACCESSIBLE">
+         <img src="assets/images/a.png" alt="ACCESSIBLE">
       </div>
       <h2>ACCESSIBLE</h2>
               <button onclick="flip('card-ACCESSIBLE')">Flip</button>
@@ -2508,7 +2528,7 @@ Module 2: The role of Environmental data in area-based planning
           <div class="card-inner" id="card-INTEROPERABLE">
             <div class="card-front">
       <div class="card-image">
-         <img src="assets/images/I.png" alt="INTEROPERABLE">
+         <img src="assets/images/i.png" alt="INTEROPERABLE">
       </div>
       <h2>INTEROPERABLE</h2>
               <button onclick="flip('card-INTEROPERABLE')">Flip</button>
@@ -2529,7 +2549,7 @@ Module 2: The role of Environmental data in area-based planning
           <div class="card-inner" id="card-REUSABLE">
             <div class="card-front">
       <div class="card-image">
-         <img src="assets/images/R.png" alt="REUSABLE">
+         <img src="assets/images/r.png" alt="REUSABLE">
       </div>
       <h2>REUSABLE</h2>
               <button onclick="flip('card-REUSABLE')">Flip</button>
@@ -2580,7 +2600,7 @@ Module 2: The role of Environmental data in area-based planning
           <div class="card-inner" id="card-COLLECTIVE">
             <div class="card-front">
       <div class="card-image">
-         <img src="assets/images/C.png" alt="COLLECTIVE">
+         <img src="assets/images/c.png" alt="COLLECTIVE">
       </div>
       <h2>COLLECTIVE BENEFIT</h2>
               <button onclick="flip('card-COLLECTIVE')">Flip</button>
@@ -2601,7 +2621,7 @@ Module 2: The role of Environmental data in area-based planning
           <div class="card-inner" id="card-AUTHORITY">
             <div class="card-front">
       <div class="card-image">
-         <img src="assets/images/A.png" alt="AUTHORITY">
+         <img src="assets/images/a.png" alt="AUTHORITY">
       </div>
       <h2>AUTHORITY TO CONTROL</h2>
               <button onclick="flip('card-AUTHORITY')">Flip</button>
@@ -2622,7 +2642,7 @@ Module 2: The role of Environmental data in area-based planning
           <div class="card-inner" id="card-RESPONSIBILITY">
             <div class="card-front">
       <div class="card-image">
-         <img src="assets/images/R.png" alt="RESPONSIBILITY">
+         <img src="assets/images/r.png" alt="RESPONSIBILITY">
       </div>
       <h2>RESPONSIBILITY</h2>
               <button onclick="flip('card-RESPONSIBILITY')">Flip</button>
@@ -2643,7 +2663,7 @@ Module 2: The role of Environmental data in area-based planning
           <div class="card-inner" id="card-ETHICS">
             <div class="card-front">
       <div class="card-image">
-         <img src="assets/images/E.png" alt="ETHICS">
+         <img src="assets/images/e.png" alt="ETHICS">
       </div>
       <h2>ETHICS</h2>
               <button onclick="flip('card-ETHICS')">Flip</button>
@@ -2988,15 +3008,7 @@ Notes:
 ${notesText || "(no notes entered)"}
 `;
 
-  const blob = new Blob([content], { type: "text/plain" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "policy-context-notes.txt";
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
+  downloadTextFile("policy-context-notes.txt", content);
 }
 
 const BLANK_EXAMPLE_FIELDS = [
@@ -3076,15 +3088,67 @@ ${get("blankStep3Text") || "(no explanation entered)"}
 ${get("blankFooter") || "(no PSBR summary entered)"}
 `;
 
+  downloadTextFile("my-policy-question-example.txt", content);
+}
+
+/* ============================================================
+   Shared download helper.
+   iOS Safari supports the <a download> trick, but gives no
+   visible confirmation (no "Download complete" banner like
+   desktop/Android) - it just quietly saves to Files, which
+   looks like nothing happened. Where available, we use the
+   native Share Sheet instead (Web Share API), which shows an
+   explicit, unmistakable UI ("Save to Files", AirDrop, etc.).
+   Either way, we show an on-screen confirmation afterwards so
+   there's never ambiguity about whether it worked.
+============================================================ */
+function downloadTextFile(filename, content){
+  if (navigator.share && navigator.canShare) {
+    try {
+      const file = new File([content], filename, { type: "text/plain" });
+      if (navigator.canShare({ files: [file] })) {
+        navigator.share({ files: [file], title: filename })
+          .then(() => showDownloadToast("Saved — check where you chose to save it."))
+          .catch(err => {
+            if (err && err.name === "AbortError") return; // user cancelled the share sheet, respect that
+            fallbackDownload(filename, content);
+          });
+        return;
+      }
+    } catch (e) {
+      // fall through to standard download
+    }
+  }
+  fallbackDownload(filename, content);
+}
+
+function fallbackDownload(filename, content){
   const blob = new Blob([content], { type: "text/plain" });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = "my-policy-question-example.txt";
+  a.download = filename;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
+  showDownloadToast("Downloaded — check your Downloads folder or Files app.");
+}
+
+function showDownloadToast(message){
+  let toast = document.getElementById("download-toast");
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.id = "download-toast";
+    toast.className = "download-toast";
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.classList.add("visible");
+  clearTimeout(showDownloadToast._timer);
+  showDownloadToast._timer = setTimeout(() => {
+    toast.classList.remove("visible");
+  }, 4000);
 }
 
 const slide = document.getElementById("slide");
