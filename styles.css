@@ -200,11 +200,17 @@ h1,h2{
     position:relative;
 }
 
+.workflow-step-header{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-top:10px;
+    margin-bottom:15px;
+}
+
 .workflow-card h2{
 
-    margin-top:20px;
-
-    margin-bottom:20px;
+    margin:0;
 
     font-family:"PT Sans Narrow",sans-serif;
 
@@ -855,6 +861,17 @@ h1,h2{
   display:flex;
   justify-content:space-around;
   align-items:center;
+  gap: 12px;
+}
+
+.footer-left,
+.footer-right{
+  flex-shrink: 0;
+  padding: 0 14px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #fff;
+  user-select: none;
 }
 
 /* ===== Slide 2 layout ===== */
@@ -1670,6 +1687,41 @@ button {
     padding: 3vh 5vw 20px;
   }
 
+  /* Back/forward arrows were sitting too close to the nav buttons
+     on mobile - give them their own reserved space at the edges */
+  .footer-main{
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .footer-left,
+  .footer-right{
+    padding: 8px 10px;
+    margin: 6px 4px 0;
+  }
+
+  /* Section headings ("- Section 1 -" and the bottom breadcrumb
+     text) had a clamp() minimum that never actually shrank on
+     narrow screens */
+  .section-heading{
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+  }
+
+  .section-text{
+    font-size: 1.1rem;
+  }
+
+  /* Flip card front titles - too big once cards shrink to 2-per-row
+     width on mobile */
+  .card-front h1{
+    font-size: 0.85rem;
+  }
+
+  .card-front h2{
+    font-size: 1.3rem;
+  }
+
   /* Fix 1: "Introduction to the guide" text was crashing into the
      logos below it. The logos are absolutely positioned at a fixed
      spot, so however tall the text renders, they don't move - they
@@ -1743,12 +1795,33 @@ button {
   .workflow-card{
     width: 100%;
     height: auto;
-    padding: 20px;
+    padding: 14px 18px;
+  }
+
+  .workflow-step-header{
+    margin-top: 2px;
+    margin-bottom: 8px;
+    gap: 10px;
+  }
+
+  .step-icon{
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+
+  .workflow-card h2{
+    font-size: 1.3rem;
+  }
+
+  .workflow-card p{
+    font-size: 1rem;
+    line-height: 1.35;
   }
 
   .workflow-arrow{
     transform: rotate(90deg);
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
   /* Fix 6: Clear/Save buttons on the blank example slide were
