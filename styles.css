@@ -832,7 +832,7 @@ h1,h2{
 
 .tool-nav{
   display:flex;
-  justify-content:center;
+  justify-content:flex-start;
   flex-wrap: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -1905,10 +1905,9 @@ button {
     margin-bottom: 16px;
   }
 
-  /* Tool category bar: on narrow screens, left-align (rather than
-     centered) since it's scrollable, and shrink the buttons */
+  /* Tool category bar: shrink buttons and add scroll padding on
+     narrow screens */
   .tool-nav{
-    justify-content: flex-start;
     padding-bottom: 4px;
   }
 
