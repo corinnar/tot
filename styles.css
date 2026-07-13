@@ -1,8 +1,10 @@
 :root {
   --teal:#1f6f68;
   --teal-dark:#134f49;
+  --teal-light: #7baba7;
+  
   --yellow:#FFF3A7;
-  --cream:#f5f3e9;
+  --cream:#f4EEE5;
   --brown:#8c7a5b;
 }
 
@@ -35,6 +37,7 @@ h1,h2{
 
 /* ======== INTRO SLIDE (LOCKED – DO NOT CHANGE) ======== */
 .slide-home{ position:relative; height:100%; }
+  background:var(--cream);
 
 .home-title{
   text-align:center;
@@ -46,14 +49,17 @@ h1,h2{
 
 .home-illustration{
   display:flex;
+  flex-direction: column;
   justify-content:center;
   margin-top:4vh;
 }
 
 .home-illustration img{
-  max-width:100%;
+  max-width: 2000px;
+  max-height: 55vh;
+  text-align:top;
   height:auto;
-  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.25));
+  filter: drop-shadow(0 4px 1px rgba(0,0,0,0.25));
 }
 
 .home-bottom-band{
@@ -100,6 +106,7 @@ h1,h2{
 
 .home-credit{
   text-align:center;
+  color: var(--teal-light);
   font-size:0.85rem;
   font-family:"PT Sans Narrow", sans-serif;
 }
@@ -265,7 +272,7 @@ h1,h2{
     display:flex;
     align-items:center;
     gap:35px;
-    margin-bottom:10px;
+    margin-bottom:8px;
 }
 
 .example-tag{
@@ -291,9 +298,9 @@ h1,h2{
 
     background:#ece6dc;
 
-    padding:22px 45px;
+    padding:16px 45px;
 
-    margin-bottom:12px;
+    margin-bottom:10px;
 }
 
 .policy-label{
@@ -304,7 +311,7 @@ h1,h2{
 
     font-size:1.8rem;
 
-    margin-bottom:14px;
+    margin-bottom:10px;
 }
 
 .policy-question{
@@ -318,7 +325,7 @@ h1,h2{
 
     background:#b9cbc3;
 
-    padding:18px 26px;
+    padding:14px 10px;
 }
 
 .example-step{
@@ -327,7 +334,7 @@ h1,h2{
 
     gap:10px;
 
-    margin-bottom:26px;
+    margin-bottom:8px;
 
     align-items:flex-start;
 }
@@ -335,7 +342,7 @@ h1,h2{
 .step-number{
 
     width:76px;
-    height:76x;
+    height:76px;
 
     border-radius:50%;
 
@@ -470,14 +477,16 @@ h1,h2{
 }
 
 .blank-example-actions{
+    position: absolute;
+    top: 20px;
+    right: 30px;
     display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 20px;
+    gap: 12px;
 }
 
 .clear-btn{
-    padding: 10px 22px;
+    padding: 10px 18px;
+	margin-top: 10px;
     border-radius: 4px;
     font-size: 1rem;
     font-family: "PT Sans", sans-serif;
@@ -485,7 +494,9 @@ h1,h2{
     background: transparent;
     color: var(--cream);
     border: 1px solid var(--cream);
+	margin-bottom: 10px;
 }
+
 
 .clear-btn:hover{
     background: rgba(255,255,255,0.1);
@@ -498,7 +509,8 @@ h1,h2{
     padding: 16px 20px;
     margin-top: 20px;
     font-size: 1.1rem;
-    text-align: center;
+    text-align: left;
+	line-height:1.2;
 }
 
 .further-reading-footer a{
@@ -660,6 +672,20 @@ h1,h2{
     text-align:center;
 }
 
+.closing-visual-top{
+    margin-bottom: 15px;
+}
+
+.closing-visual.closing-visual-top img{
+    max-height: 15vh;
+}
+
+.closing-visual-top .closing-tagline{
+    font-size: 1.3rem;
+    line-height: 1.3;
+    margin-top: 6px;
+}
+
 .closing-visual img{
     max-width:100%;
     max-height:34vh;
@@ -729,9 +755,9 @@ h1,h2{
 
     font-family:"PT Sans Narrow", sans-serif;
 
-    font-size:2.5rem;
+    font-size:1.6rem;
 
-    line-height:2;
+    line-height:1.3;
 }
 
 .practice-footer2{
@@ -796,6 +822,9 @@ h1,h2{
 .tool-nav{
   display:flex;
   justify-content:center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   gap:0.4rem;
 
   margin-bottom:0.3rem;
@@ -811,6 +840,7 @@ h1,h2{
 
   padding: 0.5rem 0.8rem;
   font-size: 1rem;
+  flex-shrink: 0;
 
   cursor: pointer;
 }
@@ -842,6 +872,11 @@ h1,h2{
   line-height:1.3;
 }
 
+.tiny-slide-heading p{
+  text-align:center;
+  font-family:"Nixie One", cursive;
+  font-size:0.7rem;
+}
 .small-slide-heading p{
   text-align:center;
   font-family:"Nixie One", cursive;
@@ -863,8 +898,16 @@ h1,h2{
   font-size:3rem;      /* adjust as you like */
   margin-bottom:60px;
   color:var(--cream);
+  
 }
-
+.medium3-slide-heading{
+  text-align:center;
+  font-family:"Nixie One", cursive;
+  font-size:3rem;      /* adjust as you like */
+  margin-bottom:20px;
+  color:var(--cream);
+  
+}
 .medium4-slide-heading{
   text-align:center;
   font-family:"Nixie One", cursive;
@@ -940,8 +983,10 @@ h1,h2{
   margin-bottom:40px;
 }
 
-.intro-panel img{
-  max-width:200px;
+.slide .intro-panel img{
+  max-width:100%;
+  width:90%;
+  height:auto;
   margin:15px 0;
 }
 
@@ -1074,15 +1119,20 @@ h1,h2{
 
 /* Slide viewport */
 #slide{
-  height: calc(100vh - var(--footer-height));
-  overflow: hidden;
+  flex: 1 1 auto;
+  height: auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   padding: 4vh 4vw;
   box-sizing: border-box;
 }
 
 /* Universal slide container */
 .slide-frame{
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   max-width: 1100px;
   margin: 0 auto;
 
@@ -1192,8 +1242,8 @@ h1,h2{
 
 .psbr-layout{
   display:grid;
-  grid-template-columns: 1fr 1.2fr 1fr;
-  gap:40px;
+  grid-template-columns: 0.85fr 1.6fr 0.85fr;
+  gap:30px;
   align-items:center;
 
   margin-top:0;
@@ -1208,64 +1258,23 @@ h1,h2{
 .psbr-column{
   display:flex;
   flex-direction:column;
-  gap:150px;
+  justify-content:center;
+  gap:40px;
+  height:100%;
 }
 
 .psbr-center{
-  position:relative;
-
   display:flex;
   justify-content:center;
   align-items:center;
+  height:100%;
 }
 
 .psbr-image{
-  width:240%;
-  max-width:2000px;
-  max-height:55vh;
+  width:100%;
+  max-width:100%;
+  max-height:68vh;
   object-fit:contain;
-}
-
-/* Questions around circle */
-
-.psbr-question{
-  position:absolute;
-
-  font-family:"PT Sans Narrow", sans-serif;
-  font-weight:bold;
-
-  color:white;
-
-  text-align:center;
-
-  width:220px;
-
-  font-size:1rem;
-  line-height:1.2;
-}
-
-.psbr-question.top{
-  top:-20px;
-  left:50%;
-  transform:translateX(-50%);
-}
-
-.psbr-question.bottom{
-  bottom:-40px;
-  left:50%;
-  transform:translateX(-50%);
-}
-
-.psbr-question.left{
-  left:-280px;
-  top:50%;
-  transform:translateY(-50%);
-}
-
-.psbr-question.right{
-  right:-280px;
-  top:50%;
-  transform:translateY(-50%);
 }
 
 /* Slightly larger PSBR boxes */
@@ -1277,46 +1286,6 @@ h1,h2{
 .psbr-box ul{
   font-size:1rem;
   line-height:1.5;
-}
-
-.psbr-question2{
-  position:absolute;
-
-  font-family:"PT Sans Narrow", sans-serif;
-  font-weight:bold;
-
-  color:gold;
-
-  text-align:center;
-
-  width:220px;
-
-  font-size:1rem;
-  line-height:1.2;
-}
-
-.psbr-question2.top{
-  top:70px;
-  left:50%;
-  transform:translateX(-50%);
-}
-
-.psbr-question2.bottom{
-  bottom:50px;
-  left:50%;
-  transform:translateX(-50%);
-}
-
-.psbr-question2.left{
-  left:-50px;
-  top:50%;
-  transform:translateY(-50%);
-}
-
-.psbr-question2.right{
-  right:-50px;
-  top:50%;
-  transform:translateY(-50%);
 }
 
 /* =========================================
@@ -1491,14 +1460,16 @@ h1,h2{
 
 /* Card container */
 .flipcard {
-  width: 250px;
-  height: 460px;
+  flex: 0 1 22%;
+  max-width: 250px;
+  height: 450px;
   perspective: 1200px;
 }
 
 /* Card container */
 .flipcard2 {
-  width: 250px;
+  flex: 0 1 22%;
+  max-width: 250px;
   height: 400px;
   perspective: 1200px;
 }
@@ -1518,7 +1489,7 @@ h1,h2{
 
 .img-credit {
   font-size: 0.65rem;
-  color: var(--teal-dark);
+  color: var(--teal-light);
   text-align: center;
   line-height: 1.2;
   padding: 2px 4px;
@@ -1564,6 +1535,14 @@ h1,h2{
   flex-direction: column;
   justify-content: space-between;
   color: var(--text-light);
+  overflow-y: auto;
+}
+
+.card-back button {
+  position: sticky;
+  bottom: 0;
+  flex-shrink: 0;
+  background: var(--brown);
 }
 
 .card-front h1 {
@@ -1602,7 +1581,7 @@ h1,h2{
 .card-back h3 {
   font-family: "PT Sans Narrow", sans-serif;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: center;
   margin: 0 0 0.5rem 0;
 }
@@ -1610,8 +1589,8 @@ h1,h2{
 .card-back h4 {
   font-family: "PT Sans Narrow", sans-serif;
   font-weight: bold;
-  font-size: 2rem;
-  text-align: center;
+  font-size: 1.2rem;
+  text-align: top;
   margin: 0 0 0.5rem 0;
 }
 
@@ -1622,7 +1601,7 @@ h1,h2{
 }
 
 .tool-item {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.2rem;
 }
 
 .tool-item a {
@@ -1639,7 +1618,7 @@ h1,h2{
 }
 
 .res-desc {
-  font-size: 2rem;
+  font-size: 1rem;
   opacity: 0.9;
   margin-top: 0.2rem;
   line-height: 1.2;
@@ -1651,7 +1630,7 @@ h1,h2{
 
 button {
   align-self: center;
-  padding: 0.3rem 0.8rem;
+  padding: 0.3rem 0.3rem;
   border: 1px solid #444;
   background: none;
   cursor: pointer;
@@ -1672,3 +1651,235 @@ button {
   border: none;
 }
 
+
+/* =========================================================
+   MOBILE RESPONSIVENESS
+   The rest of this stylesheet assumes a fixed-height desktop
+   slide that never scrolls. That breaks down on small screens
+   where the same content can't physically fit without scrolling.
+   This block: (1) lets slide content scroll vertically instead
+   of being clipped or spilling into the footer, (2) collapses
+   multi-column layouts to a single column, (3) makes the
+   category tool-nav bar scroll horizontally instead of
+   overflowing the page, (4) scales down oversized headings.
+========================================================= */
+
+@media (max-width: 768px) {
+
+  #slide{
+    padding: 3vh 5vw 20px;
+  }
+
+  /* Fix 1: "Introduction to the guide" text was crashing into the
+     logos below it. The logos are absolutely positioned at a fixed
+     spot, so however tall the text renders, they don't move - they
+     just get covered. Let them flow naturally instead, and shrink
+     the paragraph text. */
+  .slide-heading p{
+    font-size: 1.15rem;
+    line-height: 1.4;
+  }
+
+  .home-logos--bottom{
+    position: static;
+    transform: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+
+  /* PSBR Pressure/State/Benefit/Response layout on mobile: the
+     diagram (now a single self-contained image with labels baked
+     in) stays first/central, and the four category boxes group
+     together underneath it. */
+  .psbr-column{
+    gap: 20px;
+    margin-bottom: 20px;
+    order: 2;
+  }
+
+  .psbr-center{
+    margin: 10px -5vw;
+    order: 1;
+  }
+
+  .psbr-image{
+    max-height: 48vh;
+  }
+
+  /* Fix 3: "General-purpose GIS..." box - fixed 2500px width and
+     oversized text don't fit mobile at all */
+  .gs-box{
+    width: 100%;
+    padding: 20px 22px;
+  }
+
+  .gs-box h2{
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+
+  .gs-box li{
+    font-size: 0.95rem;
+    line-height: 1.35;
+  }
+
+  .gs-note{
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  /* Fix 5: "Match Your Question to Tool Types" workflow cards -
+     stack vertically on mobile instead of staying in a fixed-width
+     horizontal row */
+  .workflow{
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .workflow-card{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .workflow-arrow{
+    transform: rotate(90deg);
+    font-size: 2rem;
+  }
+
+  /* Fix 6: Clear/Save buttons on the blank example slide were
+     pinned to the top-right corner, overlapping the header on
+     narrow screens. Let them flow below the content instead. */
+  .blank-example-actions{
+    position: static;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  /* Multi-column layouts collapse to a single stacked column */
+  .slide-two,
+  .slide-3c,
+  .bp-grid,
+  .closing-layout,
+  .psbr-layout,
+  .home-bottom-band{
+    grid-template-columns: 1fr !important;
+  }
+
+  .home-bottom-band{
+    position: static;
+    height: auto;
+    gap: 16px;
+    padding: 16px 4vw;
+  }
+
+  /* Overview page: the intro panel (Analysis 101 title, image, blurb)
+     was appearing last on mobile since it's the second grid column.
+     Move it to the top. */
+  .slide-two .intro-panel{
+    order: -1;
+    margin-bottom: 16px;
+  }
+
+  /* Tool category bar: on narrow screens, left-align (rather than
+     centered) since it's scrollable, and shrink the buttons */
+  .tool-nav{
+    justify-content: flex-start;
+    padding-bottom: 4px;
+  }
+
+  .tool-nav button{
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  /* Flip cards: height adapts on mobile so content isn't forced
+     into a fixed box; width/column-count is handled by the
+     orientation-based rules below, applied at every screen size */
+  .flipcard,
+  .flipcard2{
+    height: auto;
+    min-height: 340px;
+  }
+
+  .flipcard-row{
+    gap: 4vw;
+  }
+
+  /* Headings: scale down for narrow screens */
+  .slide-heading{
+    font-size: 2.2rem;
+  }
+
+  .medium-slide-heading{
+    font-size: 1.5rem;
+  }
+
+  .medium2-slide-heading{
+    font-size: 2rem;
+  }
+
+  .medium4-slide-heading{
+    font-size: 1.2rem;
+  }
+
+  .example-title{
+    font-size: 1.8rem;
+  }
+
+  .example-header{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .policy-box{
+    padding: 14px 20px;
+  }
+
+  /* Example step layout: let content wrap naturally */
+  .example-step{
+    flex-wrap: wrap;
+  }
+
+  /* Best practice cards: single column already via bp-grid fix above */
+  .bp-card{
+    min-height: auto;
+  }
+
+  /* Closing slide: image above steps rather than side-by-side */
+  .closing-visual img{
+    max-height: 22vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-heading{
+    font-size: 1.8rem;
+  }
+}
+
+/* Flip cards: explicitly 4 per row in landscape, 2x2 in portrait,
+   regardless of exact screen width - matches how people actually
+   hold/resize a device rather than a single fixed breakpoint. */
+@media (orientation: portrait) {
+  .flipcard,
+  .flipcard2{
+    flex: 0 1 44%;
+    max-width: 250px;
+  }
+}
+
+@media (orientation: landscape) {
+  .flipcard,
+  .flipcard2{
+    flex: 0 1 22%;
+    max-width: 250px;
+  }
+}
