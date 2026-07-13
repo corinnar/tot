@@ -14,7 +14,6 @@ const slides = [
 
       <div class="home-illustration">
         <img src="assets/images/tot1.png" alt="Analysis 101 illustration">
-        <div class="img-credit">Image credits: adapted from images by ani rofiqah, Suncheli Project, Olivia Haberme, Amethyst Studio, WEBTECHOPS LLP, Jihoon Choi and Adrien Coquet from Noun Project</div>
       </div>
 
       <div class="home-bottom-band">
@@ -354,8 +353,50 @@ html:`
       <!-- CENTER IMAGE -->
       <div class="psbr-center">
 
-        <img src="assets/images/psbr3.png"
-             alt="PSBR Framework: Pressure, State, Benefit, Response cycle"
+        <div class="psbr-question top">
+          Why are we losing biodiversity?
+        </div>
+
+        <div class="psbr-question left">
+          What is done about<br>
+      biodiversity losses?
+        </div>
+
+        <div class="psbr-question right">
+          How is the state of<br>
+      biodiversity changing?
+        </div>
+
+        <div class="psbr-question bottom">
+          What are the implications of<br>
+      biodiversity losses?
+        </div>
+
+        <div class="psbr-question2 top">
+          Less pressure helps<br>
+      biodiversity to recover
+        </div>
+
+        <div class="psbr-question2 left">
+          Responses<br>
+      reduce<br>
+      pressure
+        </div>
+
+        <div class="psbr-question2 right">
+          Enhanced<br>
+      biodiversity<br>
+      delivers more<br>
+      benefits
+        </div>
+
+        <div class="psbr-question2 bottom">
+          Benefits generate support<br>
+      for effective responses
+        </div>
+
+        <img src="assets/images/psbr2.png"
+             alt="PSBR Framework"
              class="psbr-image">
 
       </div>
@@ -782,7 +823,6 @@ html:`
         <div class="card-image">
          <img src="assets/images/8.png" alt="Habitat condition">
       </div>
-      <div class="img-credit">Image credit:<br>UNEP-WCMC</div>
               <h1>i.e. how healthy or intact is the ecological system</h1>
               <button onclick="flip('card-condition')">Flip</button>
             </div>
@@ -2700,8 +2740,8 @@ Module 2: The role of Environmental data in area-based planning
               <h4>Key Features</h4>
               <ul>
         <li class="tool-item">
-        <div class="tool-desc">1. <a href="https://unhabitat.org/gender-mainstreaming-in-spatial-planning" target="_blank">UN-Habitat Guidelines for Gender Mainstreaming in Spatial Planning.</a> Recommendations and best practice guidance on integrating gender equality into urban planning<br>
-2. <a href="https://www.efdinitiative.org/publications/poverty-and-gender-considerations-marine-spatial-planning-conceptual-framework" target="_blank">Marine Spatial Planning (MSP) Gender and Poverty Framework</a>. Guidance on integrating gender equality and poverty reduction into the marine spatial planning process.<br> 3. <a href="https://data.unwomen.org/sites/default/files/documents/Publications/CEGS/Geoespatial%20Framework.pdf" target="_blank">Theoretical-Methodological framework for Geospatial analysis and gender statistic</a>. An approach for integrating gender statistics into geospatial analysis. </div>
+        <div class="tool-desc">1. UN-Habitat Guidelines for Gender Mainstreaming in Spatial Planning. Recommendations and best practice guidance on integrating gender equality into urban planning<br>
+2. Marine Spatial Planning (MSP) Gender and Poverty Framework.Guidance on integrating gender equality and poverty reduction into the marine spatial planning process.<br> 3.Theoretical-Methodological framework for Geospatial analysis and gender statistics.  An approach for integrating gender statistics into geospatial analysis. </div>
         </li>
               </ul>
               <button onclick="flip('card-gender')">Flip back</button>
@@ -2722,7 +2762,7 @@ Module 2: The role of Environmental data in area-based planning
               <h4>Key Features</h4>
               <ul>
         <li class="tool-item">
-        <div class="tool-desc"><a href="https://servirglobal.net/resources/servir-gender-analysis-tool" target="_blank">SERVIR Gender Analysis Tool.</a> Identifies gender-specific vulnerabilities to climate change and maps access to resources like water and land. It integrates with GIS for spatial analysis and visualises data to highlight disparities, supporting gender-sensitive climate adaptation and policy-making. Ideal for practitioners focused on gender equity and environmental resilience.</div>
+        <div class="tool-desc">SERVIR Gender Analysis Tool. Identifies gender-specific vulnerabilities to climate change and maps access to resources like water and land. It integrates with GIS for spatial analysis and visualises data to highlight disparities, supporting gender-sensitive climate adaptation and policy-making. Ideal for practitioners focused on gender equity and environmental resilience.</div>
         </li>
               </ul>
               <button onclick="flip('card-servir')">Flip back</button>
@@ -2743,10 +2783,12 @@ Module 2: The role of Environmental data in area-based planning
               <h4>Key Features</h4>
               <ul>
         <li class="tool-item">
-        <div class="tool-desc">1. <a href="https://environment.humanrights.dk/" target="_blank"><strong>Human Rights and Environment Explorer</strong></a> Danish Institute for Human Rights (DIHR) tool for searching treaties and court decisions relevant to the environment, including spatial planning.</div>
+        <div class="tool-desc"><strong>Human Rights and Environment Explorer</strong> — Danish Institute for Human Rights (DIHR) tool for searching treaties and court decisions relevant to the environment, including spatial planning.</div>
+        <a href="https://environment.humanrights.dk/" target="_blank">Visit resource</a>
         </li>
         <li class="tool-item">
-        <div class="tool-desc">2. <a href="https://www.humanrights.dk/tools/human-rights-land-navigator" target="_blank"><strong>Human Rights and Land Navigator</strong></a> DIHR tool that helps identify which human rights standards are relevant to land-related decisions, including land use and tenure.</div>
+        <div class="tool-desc"><strong>Human Rights and Land Navigator</strong> — DIHR tool that helps identify which human rights standards are relevant to land-related decisions, including land use and tenure.</div>
+        <a href="https://www.humanrights.dk/tools/human-rights-land-navigator" target="_blank">Visit resource</a>
         </li>
               </ul>
               <button onclick="flip('card-g3')">Flip back</button>
@@ -2767,7 +2809,9 @@ Module 2: The role of Environmental data in area-based planning
               <h4>Key Features</h4>
               <ul>
         <li class="tool-item">
-        <div class="tool-desc"><a href="https://www.unicef-irc.org/publications/971-ethical-considerations-when-using-geospatial-technologies-for-evidence-generation.html" target="_blank">Ethical Considerations When Using Geospatial Technologies for Evidence Generation.</a>
+        <div class="tool-desc">Ethical Considerations
+When Using Geospatial Technologies
+for Evidence Generation.
 Includes a checklist for ethical use of geospatial technologies for evidence generation</div>
         </li>
               </ul>
@@ -3089,7 +3133,6 @@ const footer = document.getElementById("footer");
 
 function render(){
   slide.innerHTML = slides[current].html;
-  slide.scrollTop = 0;
   renderFooter();
   if(slides[current].id === 'policy_checklist'){
     restorePolicyNotes();
