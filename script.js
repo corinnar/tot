@@ -286,91 +286,7 @@ html:`
 `
 },
 
-/* ========= SLIDE 4b (section 1 slides ) ========= */
-/* ========= SLIDE – PSBR Framework Interactive ========= */
-{
-  id:"psbr_framework",
-  footer:"full",
-  html:`
-
-  <div class="slide-frame top">
-
-    <div class="slide-heading">
-      PSBR Framework & Tool Typology
-    </div>
-
-    <div class="medium-slide-heading psbr-subtitle">
-      Pressure – State – Benefit – Response
-    </div>
-
-    <div class="psbr-layout">
-
-      <!-- LEFT COLUMN -->
-      <div class="psbr-column">
-
-        <div class="snav-box psbr-box pressure">
-          <h3>Pressure</h3>
-          <ul>
-            <li>a. Biodiversity & Ecosystem Sensitivity</li>
-            <li>b. Species & Habitat Trends</li>
-            <li>d. Change Monitoring & Modelling</li>
-          </ul>
-        </div>
-
-        <div class="snav-box psbr-box response">
-          <h3>Response</h3>
-          <ul>
-            <li>c. Indicators & Metrics</li>
-            <li>d. Change Monitoring & Modelling</li>
-            <li>f. Nature-Based Solutions & Adaptation</li>
-            <li>g. Conservation Planning</li>
-          </ul>
-        </div>
-
-      </div>
-
-      <!-- CENTER IMAGE -->
-      <div class="psbr-center">
-
-        <img src="assets/images/psbr3.png"
-             alt="PSBR Framework: Pressure, State, Benefit, Response cycle"
-             class="psbr-image">
-
-      </div>
-
-      <!-- RIGHT COLUMN -->
-      <div class="psbr-column">
-
-        <div class="snav-box psbr-box state">
-          <h3>State</h3>
-          <ul>
-            <li>b. Species & Habitat Trends</li>
-            <li>c. Indicators & Metrics</li>
-            <li>d. Change Monitoring & Modelling</li>
-            <li>e. Ecosystem Services & Valuation</li>
-          </ul>
-        </div>
-
-        <div class="snav-box psbr-box benefit">
-          <h3>Benefit</h3>
-          <ul>
-            <li>e. Ecosystem Services & Valuation</li>
-            <li>f. Nature-Based Solutions & Adaptation</li>
-            <li>g. Conservation Planning</li>
-          </ul>
-        </div>
-
-      </div>
-
-    </div>
-
-
-  </div>
-
-  `
-},
-
-/* ========= SLIDE 4c – Policy Themes ========= */
+/* ========= SLIDE 4b – Policy Themes ========= */
 {
   id:"psbr3",
   footer:"full",
@@ -398,6 +314,192 @@ html:`
           <li><strong>f.</strong> Nature-Based Solutions & Adaptation</li>
           <li><strong>g.</strong> Conservation Planning</li>
         </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  `
+},
+
+/* ========= SLIDE 4c (section 1 slides ) ========= */
+/* ========= SLIDE – PSBR Framework Interactive ========= */
+{
+  id:"psbr_framework",
+  footer:"full",
+  html:`
+
+  <div class="slide-frame top">
+
+    <div class="slide-heading">
+      PSBR Framework & Tool Typology
+    </div>
+
+    <div class="medium-slide-heading psbr-subtitle">
+      Pressure – State – Benefit – Response
+    </div>
+
+    <div class="psbr-hint">Hover or click any element to highlight the tools that serve it; click again to unpin.</div>
+
+    <div class="psbr-interactive-layout">
+
+      <!-- RADIAL DIAGRAM -->
+      <div class="psbr-radial-wrap">
+
+        <div class="psbr-radial">
+
+          <svg viewBox="0 0 520 520" class="psbr-radial-svg" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <marker id="ahp" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#c94979"></path></marker>
+              <marker id="ahs" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#009BD9"></path></marker>
+              <marker id="ahb" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#E5A100"></path></marker>
+              <marker id="ahr" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#AFCB27"></path></marker>
+            </defs>
+            <circle cx="260" cy="260" r="140" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="10"></circle>
+
+            <!-- Wide invisible hit-target paths: the visible arcs below are
+                 only 9px thick with fill="none", which is very hard to
+                 accurately hover/click. These transparent 36px-wide paths
+                 (same curve, drawn first / underneath) do all the actual
+                 interaction handling, giving a much more forgiving target. -->
+            <path data-el="pressure" onmouseenter="psbrHoverQuadrant('pressure')" onmouseleave="psbrLeave()" onclick="psbrClickQuadrant('pressure')" d="M289 123 A140 140 0 0 1 397 231" fill="none" stroke="transparent" stroke-width="36" class="psbr-hit-target"></path>
+            <path data-el="state" onmouseenter="psbrHoverQuadrant('state')" onmouseleave="psbrLeave()" onclick="psbrClickQuadrant('state')" d="M397 289 A140 140 0 0 1 289 397" fill="none" stroke="transparent" stroke-width="36" class="psbr-hit-target"></path>
+            <path data-el="benefit" onmouseenter="psbrHoverQuadrant('benefit')" onmouseleave="psbrLeave()" onclick="psbrClickQuadrant('benefit')" d="M231 397 A140 140 0 0 1 123 289" fill="none" stroke="transparent" stroke-width="36" class="psbr-hit-target"></path>
+            <path data-el="response" onmouseenter="psbrHoverQuadrant('response')" onmouseleave="psbrLeave()" onclick="psbrClickQuadrant('response')" d="M123 231 A140 140 0 0 1 231 123" fill="none" stroke="transparent" stroke-width="36" class="psbr-hit-target"></path>
+
+            <!-- Black outline layer: sits behind the colored arcs, wider
+                 than them, so it peeks out as a crisp black rim when an
+                 arc is active - makes the selection state pop clearly -->
+            <path data-el="pressure" d="M289 123 A140 140 0 0 1 397 231" fill="none" stroke="#111" stroke-width="17" stroke-linecap="round" class="psbr-arc-outline"></path>
+            <path data-el="state" d="M397 289 A140 140 0 0 1 289 397" fill="none" stroke="#111" stroke-width="17" stroke-linecap="round" class="psbr-arc-outline"></path>
+            <path data-el="benefit" d="M231 397 A140 140 0 0 1 123 289" fill="none" stroke="#111" stroke-width="17" stroke-linecap="round" class="psbr-arc-outline"></path>
+            <path data-el="response" d="M123 231 A140 140 0 0 1 231 123" fill="none" stroke="#111" stroke-width="17" stroke-linecap="round" class="psbr-arc-outline"></path>
+
+            <!-- Visible decorative arcs on top - not directly interactive
+                 (clicks pass through to the hit-targets above), but still
+                 tagged with data-el so they dim/highlight correctly -->
+            <path data-el="pressure" d="M289 123 A140 140 0 0 1 397 231" fill="none" stroke="#c94979" stroke-width="8" stroke-linecap="round" marker-end="url(#ahp)" class="psbr-arc-visible"></path>
+            <path data-el="state" d="M397 289 A140 140 0 0 1 289 397" fill="none" stroke="#009BD9" stroke-width="8" stroke-linecap="round" marker-end="url(#ahs)" class="psbr-arc-visible"></path>
+            <path data-el="benefit" d="M231 397 A140 140 0 0 1 123 289" fill="none" stroke="#E5A100" stroke-width="8" stroke-linecap="round" marker-end="url(#ahb)" class="psbr-arc-visible"></path>
+            <path data-el="response" d="M123 231 A140 140 0 0 1 231 123" fill="none" stroke="#AFCB27" stroke-width="8" stroke-linecap="round" marker-end="url(#ahr)" class="psbr-arc-visible"></path>
+          </svg>
+
+          <div class="psbr-radial-center" id="psbrCenterText">
+            <div>PSBR</div>
+            <div>Framework</div>
+          </div>
+
+          <div class="psbr-radial-label pressure" data-el="pressure" onmouseenter="psbrHoverQuadrant('pressure')" onmouseleave="psbrLeave()" onclick="psbrClickQuadrant('pressure')">
+            <div class="psbr-radial-tag">Pressure</div>
+            <div class="psbr-radial-desc">Less pressure helps<br>biodiversity to recover</div>
+          </div>
+
+          <div class="psbr-radial-label state" data-el="state" onmouseenter="psbrHoverQuadrant('state')" onmouseleave="psbrLeave()" onclick="psbrClickQuadrant('state')">
+            <div class="psbr-radial-tag">State</div>
+            <div class="psbr-radial-desc">Enhanced biodiversity<br>delivers more benefits</div>
+          </div>
+
+          <div class="psbr-radial-label benefit" data-el="benefit" onmouseenter="psbrHoverQuadrant('benefit')" onmouseleave="psbrLeave()" onclick="psbrClickQuadrant('benefit')">
+            <div class="psbr-radial-tag">Benefit</div>
+            <div class="psbr-radial-desc">Benefits generate support<br>for effective responses</div>
+          </div>
+
+          <div class="psbr-radial-label response" data-el="response" onmouseenter="psbrHoverQuadrant('response')" onmouseleave="psbrLeave()" onclick="psbrClickQuadrant('response')">
+            <div class="psbr-radial-tag">Response</div>
+            <div class="psbr-radial-desc">Responses reduce pressure</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- TOOL / ELEMENT MATRIX -->
+      <div class="psbr-matrix-wrap">
+
+        <table class="psbr-matrix">
+          <thead>
+            <tr>
+              <th class="psbr-matrix-corner">Tool / Element</th>
+              <th data-el="pressure" onmouseenter="psbrHoverQuadrant('pressure')" onmouseleave="psbrLeave()" onclick="psbrClickQuadrant('pressure')" class="psbr-col-pressure">
+                <div class="psbr-matrix-th-tag">Pressure</div>
+                <div class="psbr-matrix-th-desc">Why are we losing biodiversity?</div>
+              </th>
+              <th data-el="state" onmouseenter="psbrHoverQuadrant('state')" onmouseleave="psbrLeave()" onclick="psbrClickQuadrant('state')" class="psbr-col-state">
+                <div class="psbr-matrix-th-tag">State</div>
+                <div class="psbr-matrix-th-desc">How is biodiversity changing?</div>
+              </th>
+              <th data-el="benefit" onmouseenter="psbrHoverQuadrant('benefit')" onmouseleave="psbrLeave()" onclick="psbrClickQuadrant('benefit')" class="psbr-col-benefit">
+                <div class="psbr-matrix-th-tag">Benefit</div>
+                <div class="psbr-matrix-th-desc">What are the implications?</div>
+              </th>
+              <th data-el="response" onmouseenter="psbrHoverQuadrant('response')" onmouseleave="psbrLeave()" onclick="psbrClickQuadrant('response')" class="psbr-col-response">
+                <div class="psbr-matrix-th-tag">Response</div>
+                <div class="psbr-matrix-th-desc">What is being done?</div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr data-row-el="pressure" data-row-id="a" onmouseenter="psbrHoverRow('pressure', 'a')" onmouseleave="psbrLeave()" onclick="psbrClickRow('pressure', 'a')">
+              <td class="psbr-matrix-label"><span class="psbr-letter">a</span>Biodiversity & Ecosystem Sensitivity</td>
+              <td class="psbr-dot-cell"><span class="psbr-dot pressure"></span></td>
+              <td class="psbr-dot-cell">–</td>
+              <td class="psbr-dot-cell">–</td>
+              <td class="psbr-dot-cell">–</td>
+            </tr>
+
+            <tr data-row-el="pressure state" data-row-id="b" onmouseenter="psbrHoverRow('pressure state', 'b')" onmouseleave="psbrLeave()" onclick="psbrClickRow('pressure state', 'b')">
+              <td class="psbr-matrix-label"><span class="psbr-letter">b</span>Species & Habitat Trends</td>
+              <td class="psbr-dot-cell"><span class="psbr-dot pressure"></span></td>
+              <td class="psbr-dot-cell"><span class="psbr-dot state"></span></td>
+              <td class="psbr-dot-cell">–</td>
+              <td class="psbr-dot-cell">–</td>
+            </tr>
+
+            <tr data-row-el="state response" data-row-id="c" onmouseenter="psbrHoverRow('state response', 'c')" onmouseleave="psbrLeave()" onclick="psbrClickRow('state response', 'c')">
+              <td class="psbr-matrix-label"><span class="psbr-letter">c</span>Indicators & Metrics</td>
+              <td class="psbr-dot-cell">–</td>
+              <td class="psbr-dot-cell"><span class="psbr-dot state"></span></td>
+              <td class="psbr-dot-cell">–</td>
+              <td class="psbr-dot-cell"><span class="psbr-dot response"></span></td>
+            </tr>
+
+            <tr data-row-el="pressure state response" data-row-id="d" onmouseenter="psbrHoverRow('pressure state response', 'd')" onmouseleave="psbrLeave()" onclick="psbrClickRow('pressure state response', 'd')">
+              <td class="psbr-matrix-label"><span class="psbr-letter">d</span>Change Monitoring & Modelling</td>
+              <td class="psbr-dot-cell"><span class="psbr-dot pressure"></span></td>
+              <td class="psbr-dot-cell"><span class="psbr-dot state"></span></td>
+              <td class="psbr-dot-cell">–</td>
+              <td class="psbr-dot-cell"><span class="psbr-dot response"></span></td>
+            </tr>
+
+            <tr data-row-el="state benefit" data-row-id="e" onmouseenter="psbrHoverRow('state benefit', 'e')" onmouseleave="psbrLeave()" onclick="psbrClickRow('state benefit', 'e')">
+              <td class="psbr-matrix-label"><span class="psbr-letter">e</span>Ecosystem Services & Valuation</td>
+              <td class="psbr-dot-cell">–</td>
+              <td class="psbr-dot-cell"><span class="psbr-dot state"></span></td>
+              <td class="psbr-dot-cell"><span class="psbr-dot benefit"></span></td>
+              <td class="psbr-dot-cell">–</td>
+            </tr>
+
+            <tr data-row-el="benefit response" data-row-id="f" onmouseenter="psbrHoverRow('benefit response', 'f')" onmouseleave="psbrLeave()" onclick="psbrClickRow('benefit response', 'f')">
+              <td class="psbr-matrix-label"><span class="psbr-letter">f</span>Nature-Based Solutions & Adaptation</td>
+              <td class="psbr-dot-cell">–</td>
+              <td class="psbr-dot-cell">–</td>
+              <td class="psbr-dot-cell"><span class="psbr-dot benefit"></span></td>
+              <td class="psbr-dot-cell"><span class="psbr-dot response"></span></td>
+            </tr>
+
+            <tr data-row-el="benefit response" data-row-id="g" onmouseenter="psbrHoverRow('benefit response', 'g')" onmouseleave="psbrLeave()" onclick="psbrClickRow('benefit response', 'g')">
+              <td class="psbr-matrix-label"><span class="psbr-letter">g</span>Conservation Planning</td>
+              <td class="psbr-dot-cell">–</td>
+              <td class="psbr-dot-cell">–</td>
+              <td class="psbr-dot-cell"><span class="psbr-dot benefit"></span></td>
+              <td class="psbr-dot-cell"><span class="psbr-dot response"></span></td>
+            </tr>
+
+          </tbody>
+        </table>
 
       </div>
 
@@ -2954,6 +3056,118 @@ let policyNotesState = loadPolicyNotes();
 
 function flip(id) {
   document.getElementById(id).classList.toggle("flipped");
+}
+
+/* ============================================================
+   PSBR Framework radial diagram + matrix table cross-highlighting.
+   Hovering or clicking a quadrant (on the radial diagram or the
+   matrix header) highlights every matrix row that touches that
+   quadrant. Hovering or clicking a matrix row highlights that one
+   row plus every quadrant it touches (some rows, like Change
+   Monitoring & Modelling, touch three at once). Clicking pins the
+   selection so it survives after the mouse moves away; clicking
+   the same thing again unpins it.
+============================================================ */
+let psbrPinnedQuadrants = null;
+let psbrPinnedRowId = null;
+
+const PSBR_QUESTIONS = {
+  pressure: 'Why are we losing biodiversity?',
+  state: 'How is the state of biodiversity changing?',
+  benefit: 'What are the implications of biodiversity losses?',
+  response: 'What is done about biodiversity losses?'
+};
+
+function psbrUpdateCenterText(quadrants){
+  const centerEl = document.getElementById('psbrCenterText');
+  if(!centerEl) return;
+  if(quadrants && quadrants.length === 1 && PSBR_QUESTIONS[quadrants[0]]){
+    const q = quadrants[0];
+    centerEl.innerHTML = `<div>${q.toUpperCase()}</div><div class="psbr-center-question">${PSBR_QUESTIONS[q]}</div>`;
+  } else {
+    centerEl.innerHTML = `<div>PSBR</div><div>Framework</div>`;
+  }
+}
+
+function psbrApplyHighlight(quadrants, rowId){
+  const svgPaths = document.querySelectorAll('.psbr-radial-svg path[data-el]');
+  const radialLabels = document.querySelectorAll('.psbr-radial-label[data-el]');
+  const matrixHeaders = document.querySelectorAll('.psbr-matrix th[data-el]');
+  const matrixRows = document.querySelectorAll('.psbr-matrix tbody tr[data-row-el]');
+  const allEls = [...svgPaths, ...radialLabels, ...matrixHeaders];
+
+  psbrUpdateCenterText(quadrants);
+
+  if(!quadrants || quadrants.length === 0){
+    allEls.forEach(el => el.classList.remove('psbr-dim', 'psbr-active'));
+    matrixRows.forEach(row => row.classList.remove('psbr-dim', 'psbr-active'));
+    return;
+  }
+
+  allEls.forEach(el => {
+    const key = el.getAttribute('data-el');
+    if(quadrants.includes(key)){
+      el.classList.add('psbr-active');
+      el.classList.remove('psbr-dim');
+    } else {
+      el.classList.remove('psbr-active');
+      el.classList.add('psbr-dim');
+    }
+  });
+
+  matrixRows.forEach(row => {
+    const thisRowId = row.getAttribute('data-row-id');
+    const isActive = rowId
+      ? (thisRowId === rowId)
+      : (row.getAttribute('data-row-el') || '').split(' ').some(q => quadrants.includes(q));
+    if(isActive){
+      row.classList.add('psbr-active');
+      row.classList.remove('psbr-dim');
+    } else {
+      row.classList.remove('psbr-active');
+      row.classList.add('psbr-dim');
+    }
+  });
+}
+
+function psbrHoverQuadrant(q){
+  if(q){
+    psbrApplyHighlight([q], null);
+  } else {
+    psbrApplyHighlight(psbrPinnedQuadrants, psbrPinnedRowId);
+  }
+}
+
+function psbrClickQuadrant(q){
+  const alreadyPinned = psbrPinnedQuadrants && psbrPinnedQuadrants.length === 1 &&
+                         psbrPinnedQuadrants[0] === q && !psbrPinnedRowId;
+  if(alreadyPinned){
+    psbrPinnedQuadrants = null;
+    psbrPinnedRowId = null;
+  } else {
+    psbrPinnedQuadrants = [q];
+    psbrPinnedRowId = null;
+  }
+  psbrApplyHighlight(psbrPinnedQuadrants, psbrPinnedRowId);
+}
+
+function psbrHoverRow(quadrantsStr, rowId){
+  psbrApplyHighlight(quadrantsStr.split(' '), rowId);
+}
+
+function psbrClickRow(quadrantsStr, rowId){
+  if(psbrPinnedRowId === rowId){
+    psbrPinnedQuadrants = null;
+    psbrPinnedRowId = null;
+  } else {
+    psbrPinnedQuadrants = quadrantsStr.split(' ');
+    psbrPinnedRowId = rowId;
+  }
+  psbrApplyHighlight(psbrPinnedQuadrants, psbrPinnedRowId);
+}
+
+function psbrLeave(){
+  psbrApplyHighlight(psbrPinnedQuadrants, psbrPinnedRowId);
 }
 
 function downloadPolicyNotes(){

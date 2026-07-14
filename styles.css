@@ -1343,27 +1343,10 @@ h1,h2{
    PSBR FRAMEWORK LAYOUT
 ========================================= */
 
-.psbr-layout{
-  display:grid;
-  grid-template-columns: 0.85fr 1.6fr 0.85fr;
-  gap:30px;
-  align-items:center;
-
-  margin-top:0;
-}
-
 /* Tighter subtitle spacing specific to the PSBR slide, so the
    diagram below has more vertical room and doesn't run into the footer */
 .psbr-subtitle{
   margin-bottom:15px;
-}
-
-.psbr-column{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap:40px;
-  height:100%;
 }
 
 .psbr-center{
@@ -1373,22 +1356,273 @@ h1,h2{
   height:100%;
 }
 
-.psbr-image{
-  width:100%;
-  max-width:100%;
-  max-height:68vh;
-  object-fit:contain;
+/* Radial PSBR diagram - a square, aspect-ratio-locked container so
+   the SVG and its overlaid labels scale together at any size */
+.psbr-radial{
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
 }
 
-/* Slightly larger PSBR boxes */
-
-.psbr-box h3{
-  font-size:2.0rem;
+.psbr-radial-svg{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.psbr-box ul{
-  font-size:1rem;
-  line-height:1.5;
+.psbr-radial-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 800;
+  color: --cream;
+  line-height: 1.15;
+}
+
+.psbr-radial-center div:first-child{
+  font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+  letter-spacing: 0.04em;
+}
+
+.psbr-radial-center div:last-child{
+  font-size: clamp(0.7rem, 1.8vw, 0.95rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0A0A0A;
+}
+
+.psbr-center-question{
+  font-size: clamp(0.62rem, 1.5vw, 0.78rem) !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  line-height: 1.25;
+  max-width: 145px;
+  margin: 4px auto 0;
+  color: #0A0A0A !important;
+}
+
+.psbr-radial-label{
+  position: absolute;
+  width: 42%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.psbr-radial-label.pressure{ left: 84.4%; top: 22.6%; }
+.psbr-radial-label.state{    left: 84.4%; top: 80.4%; }
+.psbr-radial-label.benefit{  left: 15.6%; top: 80.4%; }
+.psbr-radial-label.response{ left: 15.6%; top: 22.6%; }
+
+.psbr-radial-tag{
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 3px;
+}
+
+.psbr-radial-label.pressure .psbr-radial-tag{ color: #f0adc6; }
+.psbr-radial-label.state .psbr-radial-tag{    color: #009BD9; }
+.psbr-radial-label.benefit .psbr-radial-tag{  color: #E5A100; }
+.psbr-radial-label.response .psbr-radial-tag{ color: #AFCB27; }
+
+.psbr-radial-desc{
+  font-size: clamp(0.65rem, 1.6vw, 0.85rem);
+  line-height: 1.25;
+  color: var(--cream);
+}
+
+.psbr-hint{
+  text-align: center;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 0.85rem;
+  font-weight: normal;
+  opacity: 0.85;
+  margin-top: 6px;
+  margin-bottom: 5px;
+}
+
+/* Two-column layout: radial diagram left, matrix table right */
+.psbr-interactive-layout{
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.psbr-radial-wrap{
+  display: flex;
+  justify-content: center;
+}
+
+.psbr-radial-wrap .psbr-radial{
+  max-width: 400px;
+}
+
+.psbr-matrix-wrap{
+  overflow-x: auto;
+}
+
+.psbr-matrix{
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.06);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.psbr-matrix-corner{
+  text-align: left;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--cream);
+  opacity: 0.7;
+  padding: 8px 10px;
+  vertical-align: bottom;
+}
+
+.psbr-matrix th{
+  padding: 8px 10px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.psbr-matrix-th-tag{
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.psbr-matrix-th-desc{
+  font-size: 0.65rem;
+  font-weight: normal;
+  opacity: 0.85;
+  margin-top: 2px;
+}
+
+.psbr-col-pressure{ background: #c94979; }
+.psbr-col-state{    background: #009BD9; }
+.psbr-col-benefit{  background: #E5A100; }
+.psbr-col-response{ background: #AFCB27; }
+
+.psbr-matrix tbody tr{
+  cursor: pointer;
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.psbr-matrix tbody tr:nth-child(odd){
+  background: rgba(255,255,255,0.04);
+}
+
+.psbr-matrix-label{
+  text-align: left;
+  padding: 7px 10px;
+  color: var(--cream);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.psbr-letter{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--teal-dark);
+  font-size: 0.7rem;
+  font-weight: 800;
+  margin-right: 8px;
+}
+
+.psbr-dot-cell{
+  text-align: center;
+  color: rgba(255,255,255,0.3);
+  font-size: 0.9rem;
+}
+
+.psbr-dot{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.psbr-dot.pressure{ background: #c94979; }
+.psbr-dot.state{    background: #009BD9; }
+.psbr-dot.benefit{  background: #E5A100; }
+.psbr-dot.response{ background: #AFCB27; }
+
+/* Hover/click cross-highlighting */
+.psbr-radial-svg path[data-el],
+.psbr-radial-label[data-el]{
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.psbr-hit-target{
+  cursor: pointer;
+}
+
+.psbr-arc-visible{
+  pointer-events: none;
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.psbr-arc-outline{
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.psbr-arc-outline.psbr-dim{
+  opacity: 0;
+}
+
+.psbr-arc-outline.psbr-active{
+  opacity: 1;
+}
+
+.psbr-dim{
+  opacity: 0.35;
+  filter: grayscale(85%);
+}
+
+.psbr-active{
+  opacity: 1;
+  filter: none;
+}
+
+.psbr-radial-label.psbr-active .psbr-radial-tag,
+.psbr-radial-label.psbr-active .psbr-radial-desc{
+  text-shadow: 0 0 3px #000, 0 0 6px #000, 0 1px 2px #000;
+}
+
+.psbr-matrix th.psbr-active{
+  box-shadow: inset 0 0 0 2px #111;
+}
+
+.psbr-matrix tbody tr.psbr-active{
+  background: rgba(255,255,255,0.14);
+}
+
+.psbr-matrix tbody tr.psbr-active .psbr-matrix-label{
+  font-weight: 700;
 }
 
 /* =========================================
@@ -1773,6 +2007,45 @@ button {
     padding: 3vh 5vw 20px;
   }
 
+  /* PSBR matrix table: compact sizing so less horizontal scroll
+     is needed to see the whole table on narrow screens */
+  .psbr-matrix-label{
+    font-size: 0.75rem;
+    padding: 6px 8px;
+    max-width: 140px;
+    white-space: normal;
+    line-height: 1.25;
+  }
+
+  .psbr-matrix th{
+    padding: 6px 6px;
+  }
+
+  .psbr-matrix-th-tag{
+    font-size: 0.7rem;
+  }
+
+  .psbr-matrix-th-desc{
+    font-size: 0.55rem;
+  }
+
+  .psbr-matrix-corner{
+    font-size: 0.65rem;
+    padding: 6px 8px;
+  }
+
+  .psbr-letter{
+    width: 15px;
+    height: 15px;
+    font-size: 0.6rem;
+    margin-right: 5px;
+  }
+
+  .psbr-dot{
+    width: 9px;
+    height: 9px;
+  }
+
   /* "What policy question(s)..." and "What previous analyses..."
      headings had no mobile-specific size at all */
   .slide-3c-left .context-title{
@@ -1834,23 +2107,11 @@ button {
     margin-top: 24px;
   }
 
-  /* PSBR Pressure/State/Benefit/Response layout on mobile: the
-     diagram (now a single self-contained image with labels baked
-     in) stays first/central, and the four category boxes group
-     together underneath it. */
-  .psbr-column{
-    gap: 20px;
-    margin-bottom: 20px;
-    order: 2;
-  }
-
+  /* PSBR radial diagram on mobile: bleed past the slide padding
+     for more room, and stack above the matrix table */
   .psbr-center{
     margin: 10px -5vw;
     order: 1;
-  }
-
-  .psbr-image{
-    max-height: 48vh;
   }
 
   /* Fix 3: "General-purpose GIS..." box - fixed 2500px width and
@@ -1931,7 +2192,7 @@ button {
   .slide-3c,
   .bp-grid,
   .closing-layout,
-  .psbr-layout,
+  .psbr-interactive-layout,
   .home-bottom-band{
     grid-template-columns: 1fr !important;
   }
