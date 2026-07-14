@@ -521,15 +521,15 @@ html:`
               <h3>Example tools</h3>
               <ul>
         <li class="tool-item">
-        <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13354" target="_blank">MESA</a>
+        <a href="https://www.researchgate.net/profile/Ragnvald-Larsen/publication/339271662_MESA_Mapping_Environmentally_Sensitive_Assets_A_spatial_tool_to_support_environmental_management/links/5e46b36f458515072d9da3dc/MESA-Mapping-Environmentally-Sensitive-Assets-A-spatial-tool-to-support-environmental-management.pdf?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6InB1YmxpY2F0aW9uIn19" target="_blank">MESA</a>
         <div class="tool-desc">Mapping Environmentally Sensitive Assets. A spatial tool to support environmental management</div>
         </li>
         <li class="tool-item">
-        <a href="https://cran.r-project.org/web/packages/BiodiversityR/BiodiversityR.pdf" target="_blank">AVISTEP</a>
+        <a href="https://avistep.birdlife.org/" target="_blank">AVISTEP</a>
         <div class="tool-desc">The Avian Sensitivity Mapping Tool for Energy Planning</div>
         </li>
         <li class="tool-item">
-        <a href="https://biodiversityinformatics.amnh.org/open_source/maxent" target="_blank">IBAT (Integrated Biodiversity Assessment Tool)</a>
+        <a href="https://www.ibat-alliance.org/" target="_blank">IBAT (Integrated Biodiversity Assessment Tool)</a>
         <div class="tool-desc">Data service on biodiversity, helping to assess threats & sensitivities to various species & ecosystems.</div>
         </li>
               </ul>
@@ -553,7 +553,7 @@ html:`
               <h3>Example tools</h3>
               <ul>
         <li class="tool-item">
-        <a href="https://www.policysupport.org/costingnature" target="_blank">WIO SYMPHONY TOOL</a>
+        <a href="https://github.com/WIOSymphony/WIOSym_InfoChannel/wiki" target="_blank">WIO SYMPHONY TOOL</a>
         <div class="tool-desc">A tool for mapping  environmental pressures & impacts in the Western Indian Ocean</div>
         </li>
         <li class="tool-item">
@@ -561,7 +561,7 @@ html:`
         <div class="tool-desc">A tool that models human impacts on biodiversity & ecosystems for policy support</div>
         </li>
         <li class="tool-item">
-        <a href="https://www.fao.org/in-action/epic/ex-act-tool/suite-of-tools/ex-act/es/" target="_blank">GLOBAL FISHING WATCH</a>
+        <a href="https://globalfishingwatch.org/" target="_blank">GLOBAL FISHING WATCH</a>
         <div class="tool-desc">Tracks global fishing activities  to help identify illegal fishing & support sustainable fisheries</div>
         </li>
               </ul>
@@ -584,15 +584,15 @@ html:`
               <h3>Example tools</h3>
               <ul>
         <li class="tool-item">
-        <a href="https://www.openforis.org/" target="_blank">GLOBIOM</a>
+        <a href="hhttps://iiasa.ac.at/models-tools-data/globiom" target="_blank">GLOBIOM</a>
         <div class="tool-desc">Global Biosphere Management Model to assess competition for land use between agriculture, bioenergy, & forestry.</div>
         </li>
         <li class="tool-item">
-        <a href="https://plugins.qgis.org/plugins/SemiAutomaticClassificationPlugin/" target="_blank">StrathE2E-App</a>
+        <a href="https://rshiny.science.strath.ac.uk/apps/StrathE2EApp/" target="_blank">StrathE2E-App</a>
         <div class="tool-desc">Models ecosystem dynamics & human impacts for marine management & conservation.</div>
         </li>
         <li class="tool-item">
-        <a href="https://oceanwealth.org/" target="_blank">OSMOSE</a>
+        <a href="https://osmose-model.org/" target="_blank">OSMOSE</a>
         <div class="tool-desc">Modelling Marine Exploited Ecosystems used in marine & fisheries management.</div>
         </li>
               </ul>
@@ -615,15 +615,15 @@ html:`
               <h3>Example tools</h3>
               <ul>
         <li class="tool-item">
-        <a href="https://docs.trends.earth/en/latest/" target="_blank">ONE HEALTH TOOLS AND TOOLKITS </a>
+        <a href="https://www.onehealthcommission.org/en/resources__services/one_health_tools__toolkits/" target="_blank">ONE HEALTH TOOLS AND TOOLKITS </a>
         <div class="tool-desc">for geospatial analysis. </div>
         </li>
         <li class="tool-item">
-        <a href="https://remap-app.org/" target="_blank">CO-HEALTH RELATIONSHIP BROWSER</a>
+        <a href="https://www.epa.gov/enviroatlas/enviroatlas-eco-health-relationship-browser" target="_blank">CO-HEALTH RELATIONSHIP BROWSER</a>
         <div class="tool-desc">Tool showing linkages between ecosystems, ecosystem services & human health.</div>
         </li>
         <li class="tool-item">
-        <a href="https://sepal.io/" target="_blank">SMART</a>
+        <a href="https://smartconservationtools.org/en-us/" target="_blank">SMART</a>
         <div class="tool-desc">Spatial Monitoring & Reporting Tool created for wildlife health surveillance.</div>
         </li>
               </ul>
@@ -885,11 +885,11 @@ html:`
               <h3>Example tools</h3>
               <ul>
         <li class="tool-item">
-        <a href="https://www.openforis.org/" target="_blank">NEA National Ecosystem Assessment</a>
+        <a href="https://www.ecosystemassessments.net/resources/" target="_blank">NEA National Ecosystem Assessment</a>
         <div class="tool-desc">Curated resources specifically to support the to support the understanding & implementation of the national ecosystem assessment process.</div>
         </li>
         <li class="tool-item">
-        <a href="https://plugins.qgis.org/plugins/SemiAutomaticClassificationPlugin/" target="_blank">Volundary guidelines on National Forest Monitoring System (NFMS)</a>
+        <a href="https://openknowledge.fao.org/server/api/core/bitstreams/d020c63f-2e61-4b1c-a238-4b8c49d0833a/content" target="_blank">Volundary guidelines on National Forest Monitoring System (NFMS)</a>
         <div class="tool-desc">providing  a framework for countries  to track changes in forest ecosystems.</div>
         </li>
               </ul>
@@ -967,23 +967,23 @@ html:`
               <h3>Example tools</h3>
               <ul>
         <li class="tool-item">
-        <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13354" target="_blank">OPEN FORIS</a>
+        <a href="https://www.openforis.org/" target="_blank">OPEN FORIS</a>
         <div class="tool-desc">Suite of open-source solutions for forest & land monitoring.</div>
         </li>
         <li class="tool-item">
-        <a href="https://cran.r-project.org/web/packages/BiodiversityR/BiodiversityR.pdf" target="_blank">COLLECT EARTH</a>
+        <a href="https://www.collect.earth/" target="_blank">COLLECT EARTH</a>
         <div class="tool-desc">Open-source system for viewing & interpreting high-resolution satellite imagery.</div>
         </li>
         <li class="tool-item">
-        <a href="https://biodiversityinformatics.amnh.org/open_source/maxent" target="_blank">TRENDS.EARTH</a>
+        <a href="https://docs.trends.earth/en/latest/" target="_blank">TRENDS.EARTH</a>
         <div class="tool-desc">Tracking land change.</div>
         </li>
         <li class="tool-item">
-        <a href="https://biodiversityinformatics.amnh.org/open_source/maxent" target="_blank">SMART:</a>
+        <a href="https://smartconservationtools.org/en-us/" target="_blank">SMART:</a>
         <div class="tool-desc">Spatial Monitoring and Reporting Tool for forest & land monitoring.</div>
         </li>
         <li class="tool-item">
-        <a href="https://biodiversityinformatics.amnh.org/open_source/maxent" target="_blank">Ecopath with Ecosim (EwE) </a>
+        <a href="https://ecopath.org/" target="_blank">Ecopath with Ecosim (EwE) </a>
         <div class="tool-desc">Suite of open source marine ecosystem modelling software.</div>
         </li>
               </ul>
@@ -1082,11 +1082,7 @@ html:`
         <li class="tool-item">
         <a href="https://naturalcapitalalliance.stanford.edu/software/invest/natcap-partnership-software-tools" target="_blank">NatCap Partnership Software & Tools</a>
         <div class="tool-desc">Curated Software & Tools for ecosystem services</div>
-        </li>		
-       <li class="tool-item">
-        <a href="https://ecosystemsknowledge.net/resources/tool-assessor/" target="_blank">Ecosystem Knowledge Network Tool Assessor</a>
-        <div class="tool-desc">Curated Tools including Ecosystem Services tools</div>
-        </li>		
+        </li>				
 
               </ul>
               <button onclick="flip('card-es')">Flip back</button>
@@ -1101,7 +1097,7 @@ html:`
         <div class="card-image">
          <img src="assets/images/18.png" alt="Carbon Stocks">
       </div>
-              <h1>ARIES (ARtifical Intelligence for Environment & Sustainability): An AI-powered and digital software for rapid ecosystem service assessment and valuation</h1>
+              <h1>ARIES: An AI-powered and digital software for rapid ecosystem service assessment and valuation</h1>
               <button onclick="flip('card-carbon')">Flip</button>
             </div>
             <div class="card-back">
