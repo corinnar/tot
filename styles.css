@@ -992,7 +992,7 @@ h1,h2{
 
 .intro-panel h2{
   font-family:"Nixie One", cursive;
-  margin-bottom:40px;
+  margin-bottom:2px;
 }
 
 .slide .intro-panel img{
@@ -1752,9 +1752,9 @@ h1,h2{
 
     display:inline-block;
 
-    padding:5px 15px;
+    padding:5px 10px;
 
-    border-radius:50px;
+    border-radius:20px;
 
     background:var(--cream);
 
@@ -1764,7 +1764,7 @@ h1,h2{
 
     font-family:"PT Sans Narrow", sans-serif;
 
-    font-size:1rem;
+    font-size:0.8rem;
 
     font-weight:bold;
 
