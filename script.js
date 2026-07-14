@@ -2765,7 +2765,7 @@ Module 2: The role of Environmental data in area-based planning
               <h4>Key Features</h4>
               <ul>
         <li class="tool-item">
-        <div class="tool-desc"><a href="https://www.unicef-irc.org/publications/971-ethical-considerations-when-using-geospatial-technologies-for-evidence-generation.html" target="_blank">Ethical Considerations When Using Geospatial Technologies for Evidence Generation.</a>
+        <div class="tool-desc"><a href="https://www.researchgate.net/publication/327546201_Ethical_Considerations_When_Using_Geospatial_Technologies_for_Evidence_Generation" target="_blank">Ethical Considerations When Using Geospatial Technologies for Evidence Generation.</a>
 Includes a checklist for ethical use of geospatial technologies for evidence generation</div>
         </li>
               </ul>
