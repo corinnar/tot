@@ -584,7 +584,7 @@ html:`
               <h3>Example tools</h3>
               <ul>
         <li class="tool-item">
-        <a href="hhttps://iiasa.ac.at/models-tools-data/globiom" target="_blank">GLOBIOM</a>
+        <a href="https://iiasa.ac.at/models-tools-data/globiom" target="_blank">GLOBIOM</a>
         <div class="tool-desc">Global Biosphere Management Model to assess competition for land use between agriculture, bioenergy, & forestry.</div>
         </li>
         <li class="tool-item">
@@ -2720,7 +2720,7 @@ Module 2: The role of Environmental data in area-based planning
               <h4>Key Features</h4>
               <ul>
         <li class="tool-item">
-        <div class="tool-desc"><a href="https://servirglobal.net/resources/servir-gender-analysis-tool" target="_blank">SERVIR Gender Analysis Tool.</a> Identifies gender-specific vulnerabilities to climate change and maps access to resources like water and land. It integrates with GIS for spatial analysis and visualises data to highlight disparities, supporting gender-sensitive climate adaptation and policy-making. Ideal for practitioners focused on gender equity and environmental resilience.</div>
+        <div class="tool-desc"><a href="https://genderandenvironment.org/gender-analysis-tool/" target="_blank">SERVIR Gender Analysis Tool.</a> Identifies gender-specific vulnerabilities to climate change and maps access to resources like water and land. It integrates with GIS for spatial analysis and visualises data to highlight disparities, supporting gender-sensitive climate adaptation and policy-making. Ideal for practitioners focused on gender equity and environmental resilience.</div>
         </li>
               </ul>
               <button onclick="flip('card-servir')">Flip back</button>
