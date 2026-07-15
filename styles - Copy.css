@@ -945,32 +945,6 @@ h1,h2{
   font-weight: bold;
 }
 
-/* Centers content and caps its width on wide/landscape screens,
-   using two flexible empty side columns rather than letting a
-   single box stretch edge-to-edge */
-.center-constrain{
-  display: grid;
-  grid-template-columns: 1fr minmax(0, 700px) 1fr;
-  margin-top: 30px;
-}
-
-.center-constrain-inner{
-  grid-column: 2;
-}
-
-.nav-hint{
-  max-width: 700px;
-  margin: 14px auto 0;
-  padding: 12px 20px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 8px;
-  text-align: center;
-  font-size: 0.95rem;
-  line-height: 1.45;
-  color: var(--cream);
-}
-
 .slide-two{
   display:grid;
   grid-template-columns: 1fr 1.2fr;
@@ -2033,48 +2007,6 @@ button {
     padding: 3vh 5vw 20px;
   }
 
-  /* Headings that had zero mobile-specific sizing at all - each
-     was staying at its full desktop size regardless of screen
-     width, wrapping to many lines and looking disproportionate */
-  .example-tag{
-    font-size: 1.3rem;
-    padding: 8px 14px;
-  }
-
-  .policy-label{
-    font-size: 1.2rem;
-  }
-
-  .bp-content h2{
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-  }
-
-  .medium2-slide-heading.closing-heading{
-    font-size: 1.8rem;
-    margin-bottom: 12px;
-  }
-
-  .medium3-slide-heading{
-    font-size: 1.7rem;
-    margin-bottom: 12px;
-  }
-
-  .nav-box h3{
-    font-size: 1.3rem;
-    padding: 8px 10px;
-  }
-
-  .themes-box{
-    width: 100%;
-    padding: 18px 20px;
-  }
-
-  .themes-box h2{
-    font-size: 1.15rem;
-    margin-bottom: 15px;
-  }
-
   /* PSBR matrix table: compact sizing so less horizontal scroll
      is needed to see the whole table on narrow screens */
   .psbr-matrix-label{
@@ -2261,13 +2193,8 @@ button {
   .bp-grid,
   .closing-layout,
   .psbr-interactive-layout,
-  .center-constrain,
   .home-bottom-band{
     grid-template-columns: 1fr !important;
-  }
-
-  .center-constrain-inner{
-    grid-column: 1;
   }
 
   .home-bottom-band{
@@ -2275,6 +2202,14 @@ button {
     height: auto;
     gap: 16px;
     padding: 16px 4vw;
+  }
+
+  /* Overview page: the intro panel (Analysis 101 title, image, blurb)
+     was appearing last on mobile since it's the second grid column.
+     Move it to the top. */
+  .slide-two .intro-panel{
+    order: -1;
+    margin-bottom: 16px;
   }
 
   /* Tool category bar: shrink buttons and add scroll padding on

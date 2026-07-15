@@ -1,6 +1,6 @@
 const slides = [
 
-/* ========= SLIDE 1 - Home / Intro ========= */
+/* ========= SLIDE 1 - Combined home + overview ========= */
 {
   id:"home",
   footer:"full",
@@ -11,64 +11,10 @@ const slides = [
       A Framework for Exploring Biodiversity Spatial Planning Tools
     </div>
 
-    <div class="center-constrain">
-      <div class="center-constrain-inner">
+    <div class="slide-two">
 
-        <div class="intro-panel">
-          <h2>Analysis 101<br>A typology of tools</h2>
-
-          <img src="assets/images/tot1.png" alt="Illustration">
-
-          <p>
-            Use this app to explore where your ‘policy question(s)’ fit within
-            the conservation landscape, or to guide you towards the types
-            of tools and methods that can help address those questions.
-          </p>
-
-          <div class="intro-panel-actions">
-            <button class="start-btn" onclick="next()">Start Guided Tour</button>
-            <div class="prototype-link">
-              <a href="http://3.64.251.154/explorer/">
-              ...or try the alternative NEA prototype →
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="home-logos">
-      <img src="assets/logos/norad.png" alt="Norad logo">
-      <img src="assets/logos/unep-wcmc.png" alt="UNEP-WCMC logo">
-      <img src="assets/logos/nea.png" alt="NEA logo">
-    </div>
-
-    <div class="home-footer-note">
-      developed by UNEP-WCMC on behalf of Norad (the Norwegian Agency for Development Cooperation). This app is currently a prototype and therefore the contents are illustrative and may contain some errors or omissions.
-    </div>
-
-  </div>
-  `
-},
-
-/* ========= SLIDE 2 - Overview Navigation ========= */
-{
-  id:"overview",
-  footer:"full",
-  html:`
-  <div class="slide">
-
-    <div class="slide-heading">
-      A Framework for Exploring Biodiversity Spatial Planning Tools
-    </div>
-
-    <div class="nav-hint">
-      Use <strong>❮</strong> and <strong>❯</strong> below to move through the guide page by page, or jump straight to a topic using the tabs. <strong>Tip:</strong> jumping via the tabs skips the pages in between, so you may miss some content — the ❮ ❯ arrows are the best way to see everything.
-    </div>
-
-    <div class="center-constrain">
-      <div class="center-constrain-inner">
+      <!-- LEFT COLUMN -->
+      <div>
 
         <div class="nav-box">
           <h3>Overview Navigation</h3>
@@ -90,12 +36,39 @@ const slides = [
         </div>
 
       </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="intro-panel">
+        <h2>Analysis 101<br>A typology of tools</h2>
+
+        <img src="assets/images/tot1.png" alt="Illustration">
+
+        <p>
+          Use this app to explore where your ‘policy question(s)’ fit within
+          the conservation landscape, or to guide you towards the types
+          of tools and methods that can help address those questions.
+        </p>
+
+        <div class="intro-panel-actions">
+          <button class="start-btn" onclick="next()">Start Guided Tour</button>
+          <div class="prototype-link">
+            <a href="http://3.64.251.154/explorer/">
+            ...or try the alternative NEA prototype →
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div class="home-logos">
       <img src="assets/logos/norad.png" alt="Norad logo">
       <img src="assets/logos/unep-wcmc.png" alt="UNEP-WCMC logo">
       <img src="assets/logos/nea.png" alt="NEA logo">
+    </div>
+
+    <div class="home-footer-note">
+      developed by UNEP-WCMC on behalf of Norad (the Norwegian Agency for Development Cooperation). This app is currently a prototype and therefore the contents are illustrative and may contain some errors or omissions.
     </div>
 
   </div>
@@ -330,7 +303,7 @@ html:`
 
       <div class="themes-box">
 
-        <h2>Typology for classifying tools by policy themes</h2>
+        <h2>Proposed typology for classifying tools by policy themes</h2>
 
         <ul>
           <li><strong>a.</strong> Biodiversity & Ecosystem Sensitivity</li>
