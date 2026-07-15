@@ -20,7 +20,7 @@ const slides = [
           <img src="assets/images/tot1.png" alt="Illustration">
 
           <p>
-            Use this app as a framework to guide you towards the tools and methods that can help address your policy questions, with illustrative examples and links to further resources..
+            Use this app as a framework to guide you towards the tools and methods that can help address your policy questions, with illustrative examples and links to further resources.
           </p>
 
           <div class="intro-panel-actions">
