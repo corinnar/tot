@@ -21,7 +21,7 @@ const slides = [
 
           <p>
             Use this app to explore where your ‘policy question(s)’ fit within
-            the conservation landscape, or to guide you towards the types
+            the conservation tools landscape, or to guide you towards the types
             of tools and methods that can help address those questions.
           </p>
 
