@@ -322,15 +322,15 @@ html:`
   <div class="slide-frame top">
 
     <div class="slide-heading">
-      Policy themes for classifying<br>
-      tools into a typology
+      How can we classify tools <br>
+      into a typology?
     </div>
 
     <div class="themes-wrapper">
 
       <div class="themes-box">
 
-        <h2>Typology for classifying tools by policy themes</h2>
+        <h2>Typology for classifying tools into policy themes</h2>
 
         <ul>
           <li><strong>a.</strong> Biodiversity & Ecosystem Sensitivity</li>
