@@ -1031,8 +1031,8 @@ h1,h2{
 }
 
 .slide .intro-panel img{
-  max-width:100%;
-  width:90%;
+  max-width:90%;
+  width:auto;
   max-height: 16vh;
   height:auto;
   margin:10px 0;

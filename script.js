@@ -2599,7 +2599,7 @@ Module 2: The role of Environmental data in area-based planning
               <h4>FINDABLE</h4>
               <ul>
         <li class="tool-item">
-        <div class="res-desc">Data and metadata are easy to find for both humans and computers, with persistent identifiers (PIDs)<br><br><em>Example: a protected-area boundary dataset is assigned a DOI and listed in a searchable catalogue such as Protected Planet, so others can locate and cite it reliably.</em></div>
+        <div class="res-desc">Data and metadata are easy to find for both humans and computers, with persistent identifiers (PIDs)<br><br><em>Example: A global protected-area dataset is published with a DOI, rich metadata, and standard keywords, and is indexed in repositories. Researchers can easily discover the dataset by searching for terms such as terrestrial or marine protected areas, IUCN category, or a specific country or region.</em></div>
         </li>
               </ul>
               <button onclick="flip('card-FINDABLE')">Flip back</button>
@@ -2641,7 +2641,7 @@ Module 2: The role of Environmental data in area-based planning
               <h4>INTEROPERABLE</h4>
               <ul>
         <li class="tool-item">
-        <div class="res-desc">Data integrates with other data for analysis, using standard formats<br><br><em>Example: land-cover data is published as a standard GeoTIFF, so it can be layered directly with other GIS datasets rather than needing format conversion first.</em></div>
+        <div class="res-desc">Data integrates with other data for analysis, using standard formats<br><br><em>Example: Data are shared in standard geospatial formats (e.g., GeoPackage, GeoTIFF or GeoJSON) and use a common coordinate reference system, enabling them to be used seamlessly across different GIS software.</em></div>
         </li>
               </ul>
               <button onclick="flip('card-INTEROPERABLE')">Flip back</button>
