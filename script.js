@@ -20,9 +20,7 @@ const slides = [
           <img src="assets/images/tot1.png" alt="Illustration">
 
           <p>
-            Use this app to explore where your ‘policy question(s)’ fit within
-            the conservation tools landscape, or to guide you towards the types
-            of tools and methods that can help address those questions.
+            Use this app as a framework to guide you towards the tools and methods that can help address your policy questions, with illustrative examples and links to further resources..
           </p>
 
           <div class="intro-panel-actions">
