@@ -260,7 +260,7 @@ h1,h2{
     display:flex;
     align-items:center;
     gap:35px;
-    margin-bottom:8px;
+    margin-bottom:4px;
 }
 
 .example-tag{
@@ -279,16 +279,20 @@ h1,h2{
     font-family:"Nixie One", cursive;
     color:var(--cream);
 
-    font-size:3.1rem;
+    font-size:2.5rem;
+}
+
+#blankTitle.example-title{
+    font-size:1.6rem;
 }
 
 .policy-box{
 
     background:#ece6dc;
 
-    padding:16px 45px;
+    padding:10px 45px;
 
-    margin-bottom:10px;
+    margin-bottom:6px;
 }
 
 .policy-label{
@@ -299,7 +303,7 @@ h1,h2{
 
     font-size:1.8rem;
 
-    margin-bottom:10px;
+    margin-bottom:6px;
 }
 
 .policy-question{
@@ -313,12 +317,12 @@ h1,h2{
 
     background:#b9cbc3;
 
-    padding:14px 10px;
+    padding:8px 10px;
 }
 
 .example-step{
 
-    margin-bottom:8px;
+    margin-bottom:6px;
 }
 
 .step-heading-row{
@@ -370,7 +374,7 @@ h1,h2{
 
 .step-title{
 
-    font-size:1.5rem;
+    font-size:1.3rem;
 
     font-weight:bold;
 
@@ -381,7 +385,7 @@ h1,h2{
 
 .step-text{
 
-    font-size:1.25rem;
+    font-size:1.05rem;
 
     color:white;
 }
@@ -904,6 +908,11 @@ h1,h2{
   color:var(--cream);
 }
 
+.care-subtitle{
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
 .medium2-slide-heading{
   text-align:center;
   font-family:"Nixie One", cursive;
@@ -951,7 +960,7 @@ h1,h2{
 .center-constrain{
   display: grid;
   grid-template-columns: 1fr minmax(0, 700px) 1fr;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .center-constrain-inner{
@@ -1024,8 +1033,9 @@ h1,h2{
 .slide .intro-panel img{
   max-width:100%;
   width:90%;
+  max-height: 16vh;
   height:auto;
-  margin:15px 0;
+  margin:10px 0;
 }
 
 .intro-panel p{
@@ -1057,7 +1067,7 @@ h1,h2{
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .home-logos img{
@@ -1149,7 +1159,7 @@ h1,h2{
 
 .slide-3c-left .context-title{
   font-family: "Nixie One", cursive;
-  font-size: 3.4rem;
+  font-size: 2.2rem;
   text-align:center;
   margin-bottom: 10px;
   margin-right:20px;

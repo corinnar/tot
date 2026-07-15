@@ -1312,7 +1312,7 @@ html:`
     <div class="slide-frame top">
 
       <div class="slide-heading">
-        What Nature-based Solutions (NbS) are relevant?
+        What tools are relevant to different Nature-based Solutions?
       </div>
 
       <section class="flipcard-row">
@@ -2455,7 +2455,7 @@ Best Practices for Working with Spatial Data
 
 <li>Gather feedback regularly to improve the workflow and build ownership.</li>
 
-<li>Adopt high-quality Free, Prior and Informed Consent (FPIC) processes when working with Indigenous Peoples and local communities.</li>
+<li>Adopt high-quality Free, Prior and Informed Consent (FPIC) processes when working with Indigenous Peoples, all communities, groups and individuals.</li>
 </ul>
 
 <div class="bp-resource">
@@ -2512,7 +2512,7 @@ Global Biodiversity Data Fitness Assessment
 
 <li>Create knowledge transfer plans for long-term sustainability.</li>
 
-<li>Integrate training on Indigenous and Local Knowledge (ILK) and participatory methods.</li>
+<li>Deliver training that incorporates Indigenous Peoples, all communities, groups and individuals, local knowledge, and participatory methods.</li>
 </ul>
 
 <div class="bp-resource">
@@ -2599,7 +2599,7 @@ Module 2: The role of Environmental data in area-based planning
               <h4>FINDABLE</h4>
               <ul>
         <li class="tool-item">
-        <div class="res-desc">Data and metadata are easy to find for both humans and computers, with persistent identifiers (PIDs)</div>
+        <div class="res-desc">Data and metadata are easy to find for both humans and computers, with persistent identifiers (PIDs)<br><br><em>Example: a protected-area boundary dataset is assigned a DOI and listed in a searchable catalogue such as Protected Planet, so others can locate and cite it reliably.</em></div>
         </li>
               </ul>
               <button onclick="flip('card-FINDABLE')">Flip back</button>
@@ -2620,7 +2620,7 @@ Module 2: The role of Environmental data in area-based planning
               <h4>ACCESSIBLE</h4>
               <ul>
         <li class="tool-item">
-        <div class="res-desc">Protocols exist to retrieve data, defining how it can be accessed</div>
+        <div class="res-desc">Protocols exist to retrieve data, defining how it can be accessed<br><br><em>Example: species occurrence records can be retrieved through a documented API, such as GBIF's data portal, rather than requiring a manual request to the data holder.</em></div>
         </li>
               </ul>
               <button onclick="flip('card-ACCESSIBLE')">Flip back</button>
@@ -2641,7 +2641,7 @@ Module 2: The role of Environmental data in area-based planning
               <h4>INTEROPERABLE</h4>
               <ul>
         <li class="tool-item">
-        <div class="res-desc">Data integrates with other data for analysis, using standard formats</div>
+        <div class="res-desc">Data integrates with other data for analysis, using standard formats<br><br><em>Example: land-cover data is published as a standard GeoTIFF, so it can be layered directly with other GIS datasets rather than needing format conversion first.</em></div>
         </li>
               </ul>
               <button onclick="flip('card-INTEROPERABLE')">Flip back</button>
@@ -2662,7 +2662,7 @@ Module 2: The role of Environmental data in area-based planning
               <h4>REUSABLE</h4>
               <ul>
         <li class="tool-item">
-        <div class="res-desc">Data is well documented to be replicated in different settings</div>
+        <div class="res-desc">Data is well documented to be replicated in different settings<br><br><em>Example: a dataset is published with a clear license and methodology notes, allowing a different country team to repeat the same analysis using their own local data.</em></div>
         </li>
               </ul>
               <button onclick="flip('card-REUSABLE')">Flip back</button>
@@ -2694,13 +2694,13 @@ Module 2: The role of Environmental data in area-based planning
   CARE Principles
   </div>
 
-  <div class="medium-slide-heading">
-  For Indigenous Data Governance
+  <div class="medium-slide-heading care-subtitle">
+  Guiding Data Governance for Indigenous Peoples, All Communities, Groups and Individuals
   </div>
 
       <section class="flipcard-row">
 
-        <div class="flipcard">
+        <div class="flipcard2">
           <div class="card-inner" id="card-COLLECTIVE">
             <div class="card-front">
       <div class="card-image">
@@ -2713,7 +2713,7 @@ Module 2: The role of Environmental data in area-based planning
               <h4>COLLECTIVE BENEFIT</h4>
               <ul>
         <li class="tool-item">
-        <div class="res-desc">Data ecosystems should enable indigenous peoples to derive value, innovation and benefit from the data.</div>
+        <div class="res-desc">Data ecosystems should be designed and governed so that Indigenous Peoples, all communities, groups and individuals can actively derive value, drive innovation and share in the benefits generated from data collected about them, not just have it extracted for others' gain.</div>
         </li>
               </ul>
               <button onclick="flip('card-COLLECTIVE')">Flip back</button>
@@ -2721,7 +2721,7 @@ Module 2: The role of Environmental data in area-based planning
           </div>
         </div>
 
-        <div class="flipcard">
+        <div class="flipcard2">
           <div class="card-inner" id="card-AUTHORITY">
             <div class="card-front">
       <div class="card-image">
@@ -2734,7 +2734,7 @@ Module 2: The role of Environmental data in area-based planning
               <h4>AUTHORITY TO CONTROL</h4>
               <ul>
         <li class="tool-item">
-        <div class="res-desc">Indigenous peoples' rights to data sovereignity must be respected, allowing them to control how their data is used.</div>
+        <div class="res-desc">The rights of Indigenous Peoples, all communities, groups and individuals to govern their own data must be recognised and upheld. They should retain meaningful authority over how their data is accessed, used, shared and represented, at every stage.</div>
         </li>
               </ul>
               <button onclick="flip('card-AUTHORITY')">Flip back</button>
@@ -2742,7 +2742,7 @@ Module 2: The role of Environmental data in area-based planning
           </div>
         </div>
 
-        <div class="flipcard">
+        <div class="flipcard2">
           <div class="card-inner" id="card-RESPONSIBILITY">
             <div class="card-front">
       <div class="card-image">
@@ -2755,7 +2755,7 @@ Module 2: The role of Environmental data in area-based planning
               <h4>RESPONSIBILITY</h4>
               <ul>
         <li class="tool-item">
-        <div class="res-desc">Researchers and institutions have a responsibility to reuse data to support indigenous self-determination and well-being.</div>
+        <div class="res-desc">Those who collect, hold or use this data carry a responsibility to do so in ways that actively support the self-determination, dignity and long-term wellbeing of the Indigenous Peoples, all communities, groups and individuals it relates to.</div>
         </li>
               </ul>
               <button onclick="flip('card-RESPONSIBILITY')">Flip back</button>
@@ -2763,7 +2763,7 @@ Module 2: The role of Environmental data in area-based planning
           </div>
         </div>
 
-        <div class="flipcard">
+        <div class="flipcard2">
           <div class="card-inner" id="card-ETHICS">
             <div class="card-front">
       <div class="card-image">
@@ -2776,7 +2776,7 @@ Module 2: The role of Environmental data in area-based planning
               <h4>ETHICS</h4>
               <ul>
         <li class="tool-item">
-        <div class="res-desc">Data must align with indigenous worldviews, with rights and well-being considered at all stages of the data lifecycle. </div>
+        <div class="res-desc">Data practices must be grounded in the worldviews, values and lived experiences of Indigenous Peoples, all communities, groups and individuals, with their rights and wellbeing considered and protected throughout the entire data lifecycle, from collection to reuse. </div>
         </li>
               </ul>
               <button onclick="flip('card-ETHICS')">Flip back</button>
@@ -2787,6 +2787,15 @@ Module 2: The role of Environmental data in area-based planning
       </section>
 
     </div>
+	
+	</section>
+
+		  <div class="further-reading-footer">
+			CARE Principles developed by the Global Indigenous Data Alliance's CARE Principles, extended here to reflect applicability also to all communities, groups and individuals.
+		  </div>
+
+		</div>
+	</div>
 </div>
   `
 },
